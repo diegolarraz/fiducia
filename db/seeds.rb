@@ -1,7 +1,13 @@
-# This file should contain all the record creation needed to seed the database with its default values.
-# The data can then be loaded with the rails db:seed command (or created alongside the database with db:setup).
-#
-# Examples:
-#
-#   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
-#   Character.create(name: 'Luke', movie: movies.first)
+professions = ["Fontaneria", "Pintura", "Carpinteria", "Electrico", "Construccion", "Gas y Calefaccion", "Techos", "Yeso"]
+
+professions.each do |profession|
+  Profession.create!(name: profession, cost: 20.0)
+end
+# Profession.create!(name: "Fontaneria", cost: 20.00)
+# Profession.create!(name: "Pintura", cost: 20.00)
+# Profession.create!(name: "Carpinteria", cost: 20.00)
+# Profession.create!(name: "Electrico", cost: 20.00)
+# Profession.create!(name: "Construccion", cost: 20.00)
+# Profession.create!(name: "Gas y Calefaccion", cost: 20.00)
+# Profession.create!(name: "Techos", cost: 20.00)
+# Profession.create!(name: "Yeso", cost: 20.00)

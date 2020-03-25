@@ -12,12 +12,12 @@ class User < ApplicationRecord
   has_many :reviews
   has_many :enquiries
 
-  validates :first_name, presence: true,
-            :last_name, presence: true,
-            :email, presence: true, uniqueness: true,
-            :phone_number, presence: true,
-            :location, presence: true,
-            :contractor_name, presence: true, if: :contractor?
+  validates :first_name, presence: true
+  validates :last_name, presence: true
+  validates :email, presence: true, uniqueness: true
+  validates :phone_number, presence: true
+  validates :location, presence: true
+  validates :contractor_name, presence: true, if: :contractor?
 
   def contractor?
     contractor
