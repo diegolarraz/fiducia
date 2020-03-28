@@ -1,0 +1,86 @@
+.card-title {
+  font-family: Open Sans;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 16px;
+  display: flex;
+  align-items: center;
+  text-align: center;
+  color: #000000;
+  position: relative;
+  justify-content: center;
+  padding: 10px;
+  margin: 0;
+}
+
+
+.card img {
+  border-top-left-radius: 8px;
+  border-top-right-radius: 8px;
+  max-height: 190px;
+}
+
+.card-img-top {
+  height: 150px;
+  width: 100%;
+  object-fit: cover;
+
+}
+
+.dropdown-styling {
+  display: flex;
+    justify-content: center;
+    margin: auto;
+}
+
+.card {
+  border-radius: 8px;
+  box-shadow: 4px 4px 4px 0.6px rgba(0,0,1,0.04);
+  border: none;
+}
+.card:hover {
+
+    transform: scale(1.05);
+    transition: 0.2s;
+}
+
+.form-control {
+  display: flex;
+  justify-content: center;
+  width: 40%;
+  height: calc(1.5em + 0.75rem + 2px);
+  line-height: 1.5;
+  box-sizing: border-box;
+
+}
+
+.dropdown-styling {
+  margin-left: auto;
+  margin-right: auto;
+  width: 50%;
+}
+
+.card-body {
+  background-color: rgba(249, 249, 249, 0.95);
+  border-radius: 8px;
+  padding: 0;
+
+  .btn {
+  border-bottom-left-radius: 8px;
+  border-bottom-right-radius: 8px;
+  width: 100%;
+  bottom: 0;
+  background-color: #6B717E;
+  color: white;
+  padding: 18px;
+  }
+}
+
+.row {
+  width: 80vw;
+}
+
+.cont {
+  display: flex;
+  justify-content: center;
+}

@@ -1,2 +1,19 @@
-<h1>Pages#home</h1>
-<p>Find me in app/views/pages/home.html.erb</p>
+<div class="cont">
+  <div class="row">
+    <% @professions.each do |profession| %>
+      <div class="col-3 mb-4">
+        <div class="card">
+          <% if profession.name == "Albañilería" %>
+            <%= image_tag "Albanileria", alt: "alttext" %>
+          <% else %>
+            <%= image_tag profession.name, alt: "alttext" %>
+          <% end %>
+          <div class="card-body">
+            <h5 class="card-title"><%= profession.name %></h5>
+            <%= link_to "Precio de #{profession.cost.round(2)}€", users_path(profession: profession), class: "btn" %>
+          </div>
+        </div>
+      </div>
+    <% end %>
+  </div>
+</div>
