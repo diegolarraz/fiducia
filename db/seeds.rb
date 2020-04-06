@@ -3,11 +3,25 @@ professions = ["Fontanería", "Pintura", "Carpintería", "Electricidad", "Albañ
 professions.each do |profession|
   Profession.create!(name: profession, cost: 20.0)
 end
-# Profession.create!(name: "Fontaneria", cost: 20.00)
-# Profession.create!(name: "Pintura", cost: 20.00)
-# Profession.create!(name: "Carpinteria", cost: 20.00)
-# Profession.create!(name: "Electrico", cost: 20.00)
-# Profession.create!(name: "Construccion", cost: 20.00)
-# Profession.create!(name: "Gas y Calefaccion", cost: 20.00)
-# Profession.create!(name: "Techos", cost: 20.00)
-# Profession.create!(name: "Yeso", cost: 20.00)
+
+# TODO CREATE USERS AND PROFESSIONALS FOR SEED FILE
+
+20.times do
+  User.create(first_name: Faker::Name.first_name,
+              last_name: Faker::Name.last_name,
+              age: (18..60).to_a.sample,
+              phone_number: Faker::PhoneNumber.phone_number,
+              location: Faker::Address.full_address,
+              contractor: false,
+              email: Faker::Internet.safe_email,
+              password: "123456"
+              )
+end
+
+Profession.all.each_with_index do |profession, index|
+  user = User.all[index]
+  user.add_profession(profession.name)
+  user.contractor_name = "#{user.first_name} #{profession.name}"
+  user.bio = Faker::Lorem.paragraph
+  user.save
+end

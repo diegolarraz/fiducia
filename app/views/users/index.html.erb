@@ -1,0 +1,6 @@
+<h1>This is the user index page</h1>
+<% @users.each do |user| %>
+  <h3><%= user.first_name %> <%= user.last_name %></h3>
+  <h6><%= user.location %></h6>
+  <p></p>
+<% end %>
