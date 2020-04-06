@@ -65,10 +65,13 @@
 }
 
 .join-card {
-  height: 55vh;
-  width: 40vh;
+  height: 68vh;
+  width: 32vw;
   border-radius: 10px;
   box-shadow: 1px 1px 4px gray;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 
 .join-cards {
@@ -81,4 +84,20 @@
 
 .landingline {
   height: 30vh;
+}
+
+.join-card-image {
+  width: 100%;
+  border-radius: 10px 10px 0px 0px;
+  max-height: 52%;
+}
+
+.join-card-bottom {
+  padding: 16px;
+}
+
+.join-btn {
+ border: 1px solid #DBD8AE;
+ border-radius: 20px;
+ text-align: center;
 }
