@@ -1,6 +1,13 @@
-<h1>This is the user index page</h1>
-<% @users.each do |user| %>
-  <h3><%= user.first_name %> <%= user.last_name %></h3>
-  <h6><%= user.location %></h6>
-  <p></p>
-<% end %>
+<div class="container">
+  <h1>Profesionales Disponibles</h1>
+  <p>Podrás comunicarte con estos profesionales, ajustar detalles, o cambiar la tarea despues de confirmar tu reserva.</p>
+  <% @users.each do |user| %>
+    <div class="contractor-card">
+      <div class="contractor-card-left">
+      </div>
+      <h3><%= user.contractor_name %></h3>
+      <h6><%= user.location %></h6>
+    </div>
+  <% end %>
+</div>
+

@@ -23,8 +23,8 @@ class User < ApplicationRecord
     contractor
   end
 
-  def add_profession(profession)
-    UserProfession.create(user: self, profession: Profession.where(name: profession).first)
+  def add_profession(profession_id)
+    UserProfession.create(user: self, profession: Profession.find(profession_id))
     self.contractor = true
   end
 
