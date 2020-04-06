@@ -1,0 +1,84 @@
+.topsec {
+  display: flex;
+}
+
+.landing-square {
+  position: absolute;
+  left: auto;
+  top: 0%;
+  right: 0%;
+  bottom: auto;
+  width: 45%;
+}
+
+.top-text {
+  width: 50%;
+}
+
+.landing-top-images {
+  width: 50%;
+  position: absolute;
+  left: auto;
+  top: 70.14px;
+  right: 0%;
+  bottom: auto;
+}
+
+.regando-pic {
+  position: absolute;
+  left: auto;
+  top: 54px;
+  right: 22%;
+  bottom: auto;
+  overflow: hidden;
+  max-width: 90%;
+  border-radius: 2px;
+  width: 80%;
+}
+
+.frase-pegadiza {
+  margin-top: 48px;
+  font-size: 28px;
+  margin-left: 11vw;
+  padding-right: 22px;
+  margin-bottom: 50px;
+}
+
+.descripcion-landing {
+  margin-left: 11vw;
+  padding-right: 22px;
+  margin-bottom: 50px;
+}
+
+.searches {
+  margin-left: 11vw;
+  border-radius: 20px;
+  margin-bottom: 140px;
+  border: 1px solid #6B717E;
+  max-width: 400px;
+}
+
+.footer {
+  margin-top: 130px;
+  height: 250px;
+  background-color: #6B717E;
+}
+
+.join-card {
+  height: 55vh;
+  width: 40vh;
+  border-radius: 10px;
+  box-shadow: 1px 1px 4px gray;
+}
+
+.join-cards {
+  display: flex;
+  justify-content: space-between;
+  margin-left: 11vw;
+  margin-right: 11vw;
+  align-items: center;
+}
+
+.landingline {
+  height: 30vh;
+}

@@ -1,19 +1,61 @@
-<div class="cont">
-  <div class="row">
-    <% @professions.each do |profession| %>
-      <div class="col-3 mb-4">
-        <div class="card">
-          <% if profession.name == "Albañilería" %>
-            <%= image_tag "Albanileria", alt: "alttext" %>
-          <% else %>
-            <%= image_tag profession.name, alt: "alttext" %>
-          <% end %>
-          <div class="card-body">
-            <h5 class="card-title"><%= profession.name %></h5>
-            <%= link_to "Precio de #{profession.cost.round(2)}€", users_path(profession: profession), class: "btn" %>
+<div class="top-box">
+  <div class="topsec">
+    <div class="top-text">
+      <h2 class="frase-pegadiza">Reformas y reparaciones, al alcance de tus dedos.</h2>
+      <p class="descripcion-landing">No te molestes, recibe ayuda de miles de profesionales de confianza para cualquier reparación, reforma o limpieza de tu hogar.</p>
+    </div>
+    <div class="landing-top-images">
+      <%= image_tag "shape landing", alt: "imagen decorativa", class: "landing-square" %>
+      <%= image_tag "regandoo", alt: "señor regando", class: "regando-pic" %>
+    </div>
+
+  </div>
+  <%= form_tag root_path, method: :get, class: "search-bar" do %>
+    <%= text_field_tag :query,
+        params[:query],
+        id: "home-search-field",
+        class: "form-control searches",
+        placeholder: "Busca tu reparación"
+      %>
+  <% end %>
+</div>
+
+<div class="cont1">
+  <h2 class= "frase-pegadiza">Disponibilidad a tu alrededor</h2>
+  <div class="cont">
+    <div class="row">
+      <% @professions.each do |profession| %>
+        <div class="col-3 mb-4">
+          <div class="card">
+            <% if profession.name == "Albañilería" %>
+              <%= image_tag "Albanileria", alt: "alttext" %>
+            <% else %>
+              <%= image_tag profession.name, alt: "alttext" %>
+            <% end %>
+            <div class="card-body">
+              <h5 class="card-title"><%= profession.name %></h5>
+              <%= link_to "Precio de #{profession.cost.round(2)}€", users_path(profession: profession), class: "btn" %>
+            </div>
           </div>
         </div>
-      </div>
-    <% end %>
+      <% end %>
+    </div>
   </div>
+</div>
+
+<div class="join-us-box">
+  <h2 class="frase-pegadiza">¡Únete a Fiducia!</h2>
+  <div class="join-cards">
+    <div class="join-card">
+
+    </div>
+    <%= image_tag "landingline", alt: "alttext", class: "landingline"%>
+    <div class="join-card">
+
+    </div>
+  </div>
+</div>
+
+<div class="footer">
+
 </div>

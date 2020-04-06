@@ -17,7 +17,7 @@
 .card img {
   border-top-left-radius: 8px;
   border-top-right-radius: 8px;
-  max-height: 190px;
+  max-height: 145px;
 }
 
 .card-img-top {
@@ -85,6 +85,11 @@
   justify-content: center;
 }
 
+.cont1 {
+  h2 {
+    color: black;
+  }
+  
 .contractor-card {
   width: 66%;
   display: flex;
