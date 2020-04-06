@@ -6,7 +6,7 @@ end
 
 # TODO CREATE USERS AND PROFESSIONALS FOR SEED FILE
 
-20.times do
+100.times do
   User.create(first_name: Faker::Name.first_name,
               last_name: Faker::Name.last_name,
               age: (18..60).to_a.sample,
@@ -18,10 +18,16 @@ end
               )
 end
 
-Profession.all.each_with_index do |profession, index|
-  user = User.all[index]
-  user.add_profession(profession.name)
-  user.contractor_name = "#{user.first_name} #{profession.name}"
-  user.bio = Faker::Lorem.paragraph
-  user.save
+5.times do
+  Profession.all.each do |profession|
+    user = User.find(rand(1..User.count))
+    if user.profession_ids.include?(profession.id)
+      next
+    else
+      user.add_profession(profession.id)
+      user.contractor_name = "#{user.first_name} #{profession.name}"
+      user.bio = Faker::Lorem.paragraph
+      user.save
+    end
+  end
 end
