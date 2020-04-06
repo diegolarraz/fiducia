@@ -1,4 +1,4 @@
-professions = ["Fontanería", "Pintura", "Carpintería", "Electricidad", "Albañilería", "Lampistería", "Parquetista", "Otro"]
+professions = ["Fontanería", "Pintura", "Carpintería", "Electricidad", "Albañilería", "Lampistería", "Parquetista", "Pladur"]
 
 professions.each do |profession|
   Profession.create!(name: profession, cost: 20.0)
