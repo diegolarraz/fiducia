@@ -8,7 +8,7 @@ class User < ApplicationRecord
   has_many :contractors, foreign_key: :contractor_id, class_name: "Enquiry"
   has_many :clients, through: :contractors
   has_many :user_professions
-  has_many :professions, through: :user_profession
+  has_many :professions, through: :user_professions
   has_many :reviews
   has_many :enquiries
 
@@ -21,6 +21,10 @@ class User < ApplicationRecord
 
   def contractor?
     contractor
+  end
+
+  def add_profession(profession)
+    UserProfession.create(user: self, profession: Profession.where(name: profession).first)
   end
 
 end

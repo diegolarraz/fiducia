@@ -17,6 +17,18 @@
     <%= f.input :password_confirmation,
                 required: false,
                 input_html: { autocomplete: "new-password" } %>
+    <%= f.input :contractor,
+                required: false,
+                input_html: { autocomplete: "contractor?" } %>
+    <%= f.input :contractor_name,
+                required: false,
+                input_html: { autocomplete: "company name" } %>
+    <%= f.input :bio,
+                required: false,
+                input_html: { autocomplete: "bio" } %>
+    <%= f.input :professions,
+                required: false,
+                input_html: { autocomplete: "current-password" } %>
     <%= f.input :current_password,
                 hint: "we need your current password to confirm your changes",
                 required: true,
