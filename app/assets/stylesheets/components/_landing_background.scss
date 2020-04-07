@@ -65,7 +65,7 @@
 }
 
 .join-card {
-  height: 68vh;
+  height: 67vh;
   width: 32vw;
   border-radius: 10px;
   box-shadow: 1px 1px 4px gray;
@@ -89,15 +89,51 @@
 .join-card-image {
   width: 100%;
   border-radius: 10px 10px 0px 0px;
-  max-height: 52%;
+
 }
 
 .join-card-bottom {
-  padding: 16px;
+  padding: 32px;
 }
 
 .join-btn {
- border: 1px solid #DBD8AE;
+ border: 2px solid #DBD8AE;
  border-radius: 20px;
  text-align: center;
+ text-decoration: none;
+ color: #6B717E;
+ background-color: rgba(219, 216, 174, 0.07);
+ margin-left: 10vw;
+ margin-right: 10vw;
+ padding: 8px;
+ margin-bottom: 16px;
+
+  &:hover {
+    text-decoration: none;
+    color: #6B717E;
+
+  }
+}
+
+.join-btn2 {
+ border: 2px solid #DBD8AE;
+ border-radius: 20px;
+ text-align: center;
+ text-decoration: none;
+ color: #6B717E;
+ background-color: rgba(219, 216, 174, 0.07);
+ margin-left: 8vw;
+ margin-right: 8vw;
+ padding: 8px;
+ margin-bottom: 16px;
+
+  &:hover {
+    text-decoration: none;
+    color: #6B717E;
+
+  }
+}
+
+.top-part-join-card {
+  justify-content: flex-start;
 }
