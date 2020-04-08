@@ -14,4 +14,14 @@
 
 .foot-col {
   margin-top: 4vh;
+  color: white;
+
+  a {
+    color: white;
+
+    &:hover {
+      color: #9AA6A4;
+      text-decoration: none;
+    }
+  }
 }
