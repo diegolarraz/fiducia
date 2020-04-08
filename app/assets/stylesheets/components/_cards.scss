@@ -1,5 +1,5 @@
 .card-title {
-  font-family: Open Sans;
+  font-family: Montserrat;
   font-style: normal;
   font-weight: bold;
   font-size: 16px;
@@ -43,7 +43,7 @@
 .card:hover {
 
     transform: scale(1.05);
-    transition: 0.2s;
+    transition: 0.3s;
 }
 
 .form-control {
@@ -75,6 +75,7 @@
   background-color: #6B717E;
   color: white;
   padding: 18px;
+  font-family: Montserrat !important;
   }
 }
 
