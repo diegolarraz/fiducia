@@ -3,13 +3,15 @@
 }
 
 .avatar_prof {
-  width: 80px;
+  width: 11vw;
 }
 
 .contractor-card {
   width: 50vw;
   border-radius: 10px;
   box-shadow: 4px 4px 4px 0.6px rgba(0,0,1,0.04);
+  margin-left: 11vw;
+  margin-bottom: 3vh;
 }
 
 .contractor-right-top {
@@ -52,5 +54,27 @@
   &:hover {
     text-decoration: none;
     color: #848157;
+  }
+}
+
+.true-cont-all {
+  background: url(shapes.png);
+  background-repeat: no-repeat;
+  background-position: left bottom;
+  background-size: 40vw 95vh;
+  background-attachment: fixed;
+}
+
+.headers-contractor {
+  margin-left: 11vw;
+  padding-top: 18px;
+  width: 50vw;
+
+  h2 {
+    margin-bottom: 18px;
+  }
+
+  p {
+    margin-bottom: 22px;
   }
 }
