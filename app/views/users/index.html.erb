@@ -5,9 +5,10 @@
     <div class="contractor-card">
       <div class="contractor-card-left">
       </div>
-      <h3><%= user.contractor_name %></h3>
+      <h3 class="name-contractor"><%= user.contractor_name %></h3>
       <h6><%= user.location %></h6>
-      <%= link_to "Enquire", new_enquiry_path %>
+      <p><%= user.bio %></p>
+      <%= link_to "Confirmar", new_enquiry_path, class: "confirm-prof-btn" %>
     </div>
   <% end %>
 </div>
