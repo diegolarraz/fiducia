@@ -1,15 +1,16 @@
-<div class="container">
-  <h1>Profesionales Disponibles</h1>
+<h1>Profesionales Disponibles</h1>
   <p>Podrás comunicarte con estos profesionales, ajustar detalles, o cambiar la tarea despues de confirmar tu reserva.</p>
   <% @users.each do |user| %>
     <div class="contractor-card">
       <div class="contractor-card-left">
+        <%= image_tag "avatar_prof", alt: "alttext", class: "avatar_prof" %> <br>
+        <%= link_to "Perfil completo", class: "perfil-completo-btn" %>
       </div>
-      <h3 class="name-contractor"><%= user.contractor_name %></h3>
-      <h6><%= user.location %></h6>
-      <p><%= user.bio %></p>
-      <%= link_to "Confirmar", new_enquiry_path, class: "confirm-prof-btn" %>
+      <div class="contractor-card-right">
+        <h3 class="name-contractor"><%= user.contractor_name %></h3>
+        <p><%= user.bio %></p>
+        <%= link_to "Confirmar", new_enquiry_path, class: "confirm-prof-btn" %>
+      </div>
     </div>
   <% end %>
-</div>
 
