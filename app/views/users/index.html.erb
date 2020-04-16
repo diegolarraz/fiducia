@@ -8,7 +8,7 @@
       <h3 class="name-contractor"><%= user.contractor_name %></h3>
       <h6><%= user.location %></h6>
       <p><%= user.bio %></p>
-      <%= link_to "Confirmar", "#", class: "confirm-prof-btn" %>
+      <%= link_to "Confirmar", new_enquiry_path, class: "confirm-prof-btn" %>
     </div>
   <% end %>
 </div>
