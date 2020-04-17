@@ -2,8 +2,25 @@
   font-size: 20px;
 }
 
+.contractor-card-left {
+  text-align: center;
+  margin-right: 10px;
+
+  a {
+    color: #000000;
+    text-decoration: none;
+
+    &:hover {
+      transition: 0.2s;
+      color: #99A6A4;
+    }
+  }
+
+}
+
 .avatar_prof {
-  width: 11vw;
+  width: 10vw;
+  margin-bottom: 8px;
 }
 
 .contractor-card {
@@ -12,34 +29,41 @@
   box-shadow: 4px 4px 4px 0.6px rgba(0,0,1,0.04);
   margin-left: 11vw;
   margin-bottom: 3vh;
+  padding: 24px;
 }
 
 .contractor-right-top {
   display: flex;
   border-bottom: 1px solid #B5B5B5;
+  padding-bottom: 4px;
 }
 
 .prof-elite {
   display: flex;
   text-align: center;
   align-items: center;
+  margin-bottom: 4px;
 }
 
 .elite-icon {
-  width: 9%;
+  width: 25px;
 
 }
 
 .star-icon {
-  width: 9%;
+  width: 20px;
+  margin-left: 2px;
+  margin-right: 3px;
 }
 
 .seguro-icon {
-  width: 7%;
+  width: 17px;
+  margin-left: 3px;
+  margin-right: 5px;
 }
 
 .prof-text {
-  margin: 0px;
+  margin-bottom: 0px;
   padding: 0px;
 }
 
@@ -54,6 +78,10 @@
   &:hover {
     text-decoration: none;
     color: #848157;
+    background-color: rgba(219, 216, 174, 0.25);
+    transform: scale(1.20);
+    transition: all .2s ease-in-out;
+    transition: 0.3s;
   }
 }
 
@@ -77,4 +105,22 @@
   p {
     margin-bottom: 22px;
   }
+}
+
+.true-cont-all {
+  padding-bottom: 130px;
+}
+
+.contractor-right-price-confirm {
+  position: absolute;
+  left: 50.5vw;
+  text-align: right;
+}
+
+.contractor-price {
+  margin-bottom: 22px;
+}
+
+.user-bio {
+  margin-top: 8px;
 }
