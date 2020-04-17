@@ -38,3 +38,21 @@
     </div>
   <% end %>
 </div>
+
+<div class="footer">
+  <div class="image-foot foot-col">
+    <%= image_tag "logo_white", alt: "Fiducia logo blanco", class: "white-logo-foot" %>
+  </div>
+  <div class="first-foot-col foot-col">
+    <h5>TRABAJA CON NOSOTROS</h5>
+    <%= link_to "Empleo", "#", class: "foot-link"  %> <br>
+    <%= link_to "Establecimientos asociados", "#", class: "foot-link"  %> <br>
+    <%= link_to "Repartidores", "#", class: "foot-link"  %> <br>
+    <%= link_to "Fiducia Business", "new_user_session_path", class: "foot-link"  %> <br>
+  </div>
+  <div class="second-foot-col foot-col">
+    <h5>AYUDA</h5>
+    <%= link_to "Preguntas frecuentes", "#", class: "foot-link" %> <br>
+    <%= link_to "Contacto", "#", class: "foot-link" %>
+  </div>
+</div>
