@@ -1,2 +1,10 @@
-<h1>Enquiries#new</h1>
-<p>Find me in app/views/enquiries/new.html.erb</p>
+<div class="container">
+  <%= simple_form_for [ @enquiry ] do |f| %>
+    <%= f.input :title %>
+    <%= f.input :property_address %>
+    <%= f.input :information %>
+    <%= f.input :date_time, as: :datetime, html5: true %>
+    <%= f.hidden_field "contractor_id", value: @contractor.id %>
+    <%= f.submit %>
+  <% end %>
+</div>

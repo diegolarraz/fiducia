@@ -3,14 +3,15 @@ class User < ApplicationRecord
   # :confirmable, :lockable, :timeoutable, :trackable and :omniauthable
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :validatable
-  has_many :clients, foreign_key: :client_id , class_name: "Enquiry"
-  has_many :contractors, through: :clients
+  has_many :enquiries
+  has_many :contractor_enquiries, foreign_key: :contractor_id, class_name: "Enquiry"
   has_many :contractors, foreign_key: :contractor_id, class_name: "Enquiry"
-  has_many :clients, through: :contractors
+  has_many :users, foreign_key: :user_id, class_name: "Enquiry"
+  has_many :users, through: :contractors
+  has_many :contractors, through: :users
   has_many :user_professions
   has_many :professions, through: :user_professions
   has_many :reviews
-  has_many :enquiries
 
   # validates :first_name, presence: true
   # validates :last_name, presence: true

@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_03_23_161944) do
+ActiveRecord::Schema.define(version: 2020_04_17_093800) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -24,6 +24,10 @@ ActiveRecord::Schema.define(version: 2020_03_23_161944) do
     t.boolean "confirmed"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
+    t.bigint "user_id"
+    t.bigint "contractor_id"
+    t.index ["contractor_id"], name: "index_enquiries_on_contractor_id"
+    t.index ["user_id"], name: "index_enquiries_on_user_id"
   end
 
   create_table "jobs", force: :cascade do |t|
@@ -83,6 +87,7 @@ ActiveRecord::Schema.define(version: 2020_03_23_161944) do
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
   end
 
+  add_foreign_key "enquiries", "users"
   add_foreign_key "jobs", "enquiries"
   add_foreign_key "reviews", "jobs"
   add_foreign_key "reviews", "users"

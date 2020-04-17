@@ -1,5 +1,5 @@
 class Enquiry < ApplicationRecord
-  belongs_to :client, class_name: "User"
+  belongs_to :user
   belongs_to :contractor, class_name: "User"
 
   validates :user_id, presence: true
