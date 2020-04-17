@@ -30,7 +30,7 @@
           </div>
           <div class="contractor-right-price-confirm">
             <h5 class="contractor-price">20€/hr</h5>
-            <%= link_to "Confirmar", new_enquiry_path, class: "confirm-prof-btn" %>
+            <%= link_to "Confirmar", new_enquiry_path(contractor_id: user), class: "confirm-prof-btn" %>
           </div>
         </div>
         <p><%= user.bio %></p>

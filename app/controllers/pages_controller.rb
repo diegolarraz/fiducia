@@ -4,4 +4,8 @@ class PagesController < ApplicationController
   def home
     @professions = Profession.all
   end
+
+  def profile
+    @user = current_user
+  end
 end

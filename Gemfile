@@ -9,6 +9,9 @@ gem 'puma'
 gem 'rails', '6.0.2.1'
 gem 'redis'
 
+#datepicker for simple forms
+gem 'datetime_picker_input'
+
 
 gem 'autoprefixer-rails'
 gem 'font-awesome-sass', '~> 5.12.0'
