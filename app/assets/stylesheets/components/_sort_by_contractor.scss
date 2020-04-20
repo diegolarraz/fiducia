@@ -28,8 +28,8 @@
 }
 
 .day-contractor {
-  margin-top: 62px;
-  border-radius: 10px;
+  margin-top: 46px;
+  border-radius: 8px;
   box-shadow: 4px 4px 4px 0.6px rgba(0,0,1,0.04);
   margin-right: 11vw;
   padding: 32px;
@@ -37,16 +37,13 @@
 }
 
 .time-contractor {
-  margin-top: 32px;
-  border-radius: 10px;
+  margin-top: 22px;
+  border-radius: 8px;
   box-shadow: 4px 4px 4px 0.6px rgba(0,0,1,0.04);
   margin-right: 11vw;
   padding: 32px;
   border: 1px solid #7691A0;
-}
-
-.top-two-day {
-
+  text-align: center;
 }
 
 .bottom-two-day {
@@ -61,5 +58,25 @@
 .top-btn-snd {
   padding-left: 36px;
   padding-right: 36px;
-  margin-left: 1.3px;
+  margin-left: 3px;
+}
+
+.top-two-time {
+  margin-bottom: 32px;
+}
+
+.time-form {
+  margin-left: 8vw;
+  width: 52px;
+  background-color: white !important;
+}
+
+.choose-a-date-time {
+  position: sticky;
+  position: -webkit-sticky;
+  top: 20px; /* required */
+}
+
+.top-two-day {
+  margin-bottom: 38px;
 }

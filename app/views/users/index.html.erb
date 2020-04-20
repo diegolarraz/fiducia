@@ -55,7 +55,7 @@
         </div>
         <div class="bottom-two-day">
           <%= link_to "Esta semana", "#", class: "sort-btn" %>
-          <%= link_to "Escoge fecha", "#", class: "sort-btn" %>
+          <%= link_to "Escoge fecha", "#", class: "sort-btn escoge-fecha" %>
         </div>
       </div>
 
@@ -64,9 +64,9 @@
           <%= link_to "08:00 - 13:00", "#", class: "sort-btn" %>
           <%= link_to "14:00 - 21:00", "#", class: "sort-btn" %>
         </div>
-        <p class="especifica-una-hora mb-0">o especifica una hora</p>
+        <p class="especifica-una-hora">o especifica una hora</p>
         <div class="bottom-time">
-          <%= form_tag users_path, method: :get, class: "form-inline" do %>
+          <%= form_tag users_path, method: :get, class: "form-inline time-form" do %>
             <%= select_tag "sort", options_for_select(%w(09:00 10:00 11:00 12:00 13:00 14:00 15:00 16:00 17:00 18:00 19:00)) %>
           <% end %>
         </div>
