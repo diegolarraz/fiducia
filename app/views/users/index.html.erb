@@ -1,42 +1,53 @@
 <div class="true-cont-all">
-  <div class="headers-contractor">
-    <h2>Profesionales Disponibles</h2>
-    <p>Podrás comunicarte con estos profesionales, ajustar detalles, o cambiar la tarea despues de confirmar tu reserva.</p>
-  </div>
-  <% @users.each do |user| %>
-    <div class="contractor-card">
-      <div class="contractor-card-left">
-        <%= image_tag "avatar_prof", alt: "alttext", class: "avatar_prof" %> <br>
-        <%= link_to "Perfil completo", class: "perfil-completo-btn" %>
-      </div>
-      <div class="contractor-card-right">
-        <div class="contractor-right-top">
-          <div class="contractor-right-text">
-            <h3 class="name-contractor"><%= user.contractor_name %></h3>
-            <div class="prof-elite">
-              <%= image_tag "elite", alt: "alttext", class: "elite-icon" %>
-              <p class="prof-text">Profesional de Élite</p>
-            </div>
-
-            <div class="prof-elite">
-              <%= image_tag "star", alt: "alttext", class: "star-icon" %>
-              <p class="prof-text">100% Reseñas Positivas</p>
-            </div>
-
-            <div class="prof-elite">
-              <%= image_tag "seguro", alt: "alttext", class: "seguro-icon" %>
-              <p class="prof-text">100% Seguro</p>
-            </div>
-          </div>
-          <div class="contractor-right-price-confirm">
-            <h5 class="contractor-price">20€/hr</h5>
-            <%= link_to "Confirmar", new_enquiry_path(contractor_id: user), class: "confirm-prof-btn" %>
-          </div>
-        </div>
-        <p class="user-bio"><%= user.bio %></p>
-      </div>
+  <div class="left-all-prof">
+    <div class="headers-contractor">
+      <h2>Profesionales Disponibles</h2>
+      <p>Podrás comunicarte con estos profesionales, ajustar detalles, o cambiar la tarea despues de confirmar tu reserva.</p>
     </div>
-  <% end %>
+    <% @users.each do |user| %>
+      <div class="contractor-card">
+        <div class="contractor-card-left">
+          <%= image_tag "avatar_prof", alt: "alttext", class: "avatar_prof" %> <br>
+          <%= link_to "Perfil completo", class: "perfil-completo-btn" %>
+        </div>
+        <div class="contractor-card-right">
+          <div class="contractor-right-top">
+            <div class="contractor-right-text">
+              <h3 class="name-contractor"><%= user.contractor_name %></h3>
+              <div class="prof-elite">
+                <%= image_tag "elite", alt: "alttext", class: "elite-icon" %>
+                <p class="prof-text">Profesional de Élite</p>
+              </div>
+
+              <div class="prof-elite">
+                <%= image_tag "star", alt: "alttext", class: "star-icon" %>
+                <p class="prof-text">100% Reseñas Positivas</p>
+              </div>
+
+              <div class="prof-elite">
+                <%= image_tag "seguro", alt: "alttext", class: "seguro-icon" %>
+                <p class="prof-text">100% Seguro</p>
+              </div>
+            </div>
+            <div class="contractor-right-price-confirm">
+              <h5 class="contractor-price">20€/hr</h5>
+              <%= link_to "Confirmar", new_enquiry_path(contractor_id: user), class: "confirm-prof-btn" %>
+            </div>
+          </div>
+          <p class="user-bio"><%= user.bio %></p>
+        </div>
+      </div>
+    <% end %>
+  </div>
+
+  <div class="right-all-prof">
+    <div class="sort-by-contractor">
+
+    </div>
+    <div class="choose-a-date-time">
+
+    </div>
+  </div>
 </div>
 
 <div class="footer">
