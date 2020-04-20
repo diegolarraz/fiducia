@@ -1,0 +1,65 @@
+.sort-by-contractor {
+  display: flex;
+  align-items: center;
+  margin-right: 11vw;
+  padding-top: 8vh;
+
+  p {
+    margin-bottom: 0px;
+    margin-right: 8px;
+  }
+}
+
+.true-cont-all {
+  display: flex;
+  justify-content: space-between;
+}
+
+.sort-btn {
+  border: 1px solid #000000;
+  color: #000000;
+  padding: 16px;
+  border-radius: 4px;
+
+  &:hover {
+    text-decoration: none;
+    color: #000000;
+  }
+}
+
+.day-contractor {
+  margin-top: 62px;
+  border-radius: 10px;
+  box-shadow: 4px 4px 4px 0.6px rgba(0,0,1,0.04);
+  margin-right: 11vw;
+  padding: 32px;
+  border: 1px solid #7691A0;
+}
+
+.time-contractor {
+  margin-top: 32px;
+  border-radius: 10px;
+  box-shadow: 4px 4px 4px 0.6px rgba(0,0,1,0.04);
+  margin-right: 11vw;
+  padding: 32px;
+  border: 1px solid #7691A0;
+}
+
+.top-two-day {
+
+}
+
+.bottom-two-day {
+  margin-top: 34px;
+}
+
+.top-btn-fst {
+  padding-left: 34px;
+  padding-right: 34px;
+}
+
+.top-btn-snd {
+  padding-left: 36px;
+  padding-right: 36px;
+  margin-left: 1.3px;
+}
