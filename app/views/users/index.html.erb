@@ -47,8 +47,13 @@
         <%= select_tag "sort", options_for_select(%w(Recomendado Disponibles)) %>
       <% end %>
     </div>
+
     <div class="choose-a-date-time">
       <div class="day-contractor">
+        <div class="header-icon-sort">
+          <%= image_tag "calendar", alt: "alttext", class: "calendar-img" %>
+          <h5>Fecha deseada</h5>
+        </div>
         <div class="top-two-day">
           <%= link_to "Urgente", "#", class: "sort-btn top-btn-fst" %>
           <%= link_to "Mañana", "#", class: "sort-btn top-btn-snd" %>
@@ -60,15 +65,21 @@
       </div>
 
       <div class="time-contractor">
-        <div class="top-two-time">
-          <%= link_to "08:00 - 13:00", "#", class: "sort-btn" %>
-          <%= link_to "14:00 - 21:00", "#", class: "sort-btn" %>
+        <div class="header-icon-sort">
+          <%= image_tag "reloj", alt: "alttext", class: "reloj-img" %>
+          <h5>Hora deseada</h5>
         </div>
-        <p class="especifica-una-hora">o especifica una hora</p>
-        <div class="bottom-time">
-          <%= form_tag users_path, method: :get, class: "form-inline time-form" do %>
-            <%= select_tag "sort", options_for_select(%w(09:00 10:00 11:00 12:00 13:00 14:00 15:00 16:00 17:00 18:00 19:00)) %>
-          <% end %>
+        <div class="cont-times">
+          <div class="top-two-time">
+            <%= link_to "08:00 - 13:00", "#", class: "sort-btn morning-time" %>
+            <%= link_to "14:00 - 21:00", "#", class: "sort-btn" %>
+          </div>
+          <p class="especifica-una-hora">o especifica una hora</p>
+          <div class="bottom-time">
+            <%= form_tag users_path, method: :get, class: "form-inline time-form" do %>
+              <%= select_tag "sort", options_for_select(%w(09:00 10:00 11:00 12:00 13:00 14:00 15:00 16:00 17:00 18:00 19:00)) %>
+            <% end %>
+          </div>
         </div>
       </div>
     </div>

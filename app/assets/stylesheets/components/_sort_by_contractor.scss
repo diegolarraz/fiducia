@@ -43,7 +43,7 @@
   margin-right: 11vw;
   padding: 32px;
   border: 1px solid #7691A0;
-  text-align: center;
+
 }
 
 .bottom-two-day {
@@ -79,4 +79,32 @@
 
 .top-two-day {
   margin-bottom: 38px;
+}
+
+.calendar-img {
+  width: 3vw;
+}
+
+.reloj-img {
+  width: 3vw;
+  margin-left: 6px;
+}
+
+.cont-times {
+  text-align: center;
+}
+
+.header-icon-sort {
+  display: flex;
+  margin-bottom: 30px;
+  align-items: center;
+
+  h5 {
+    margin-left: 3px;
+    margin-bottom: 0px;
+  }
+}
+
+.morning-time {
+  margin-right: 3px;
 }
