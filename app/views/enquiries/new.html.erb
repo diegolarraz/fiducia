@@ -3,7 +3,8 @@
     <%= f.input :title %>
     <%= f.input :property_address %>
     <%= f.input :information %>
-    <%= f.input :date_time, as: :datetime, html5: true %>
+    <%= f.input :date, html5: true %>
+    <%= f.input :timeslot, collection: ['AM', 'PM', 'All Day']%>
     <%= f.hidden_field "contractor_id", value: @contractor.id %>
     <%= f.submit %>
   <% end %>

@@ -1,0 +1,11 @@
+<div class="container">
+  <% if @user.contractor %>
+    <%= simple_form_for @user do |f| %>
+    <%= f.input :contractor_name %>
+    <%= f.input :bio %>
+    <%= f.input :logo %>
+    <%= f.association :professions, collection: Profession.all_names %>
+    <%= f.submit %>
+    <% end %>
+  <% end %>
+</div>
