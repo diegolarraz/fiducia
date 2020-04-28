@@ -3,7 +3,7 @@
     <%= f.input :title %>
     <%= f.input :property_address %>
     <%= f.input :information %>
-    <%= f.input :date_time, as: :datetime, html5: true %>
+    <%= f.input :timeslots, collection: %W[Monday Tuesday Wednesday Thursday Friday Saturday Sunday], input_html: { multiple: true } %>
     <%= f.hidden_field "contractor_id", value: @contractor.id %>
     <%= f.submit %>
   <% end %>

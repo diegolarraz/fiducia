@@ -7,5 +7,5 @@ class Enquiry < ApplicationRecord
   validates :title, presence: true
   validates :property_address, presence: true
   validates :information, presence: true
-  validates :date_time, presence: true
+  # validates :date_time, presence: true
 end
