@@ -9,7 +9,7 @@ class EnquiriesController < ApplicationController
     @enquiry = Enquiry.new(enquiry_params)
     @enquiry.user = current_user
     @enquiry.contractor = User.find(params['enquiry']['contractor_id'].to_i)
-    raise
+    # raise
     if @enquiry.save
       redirect_to profile_path
     else

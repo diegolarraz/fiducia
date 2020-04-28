@@ -29,4 +29,16 @@ class User < ApplicationRecord
     self.contractor = true
   end
 
+  def become_contractor
+    self.contractor = true
+  end
+
+  def update_professions(array)
+    array.each do |element|
+      unless element == "" || self.user_professions.find_by_profession_id(Profession.find_by_name(element).id)
+        self.add_profession(Profession.find_by_name(element).id)
+      end
+    end
+  end
+
 end
