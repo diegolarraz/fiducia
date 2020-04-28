@@ -1,40 +1,105 @@
 <div class="true-cont-all">
-  <div class="headers-contractor">
-    <h2>Profesionales Disponibles</h2>
-    <p>Podrás comunicarte con estos profesionales, ajustar detalles, o cambiar la tarea despues de confirmar tu reserva.</p>
-  </div>
-  <% @users.each do |user| %>
-    <div class="contractor-card">
-      <div class="contractor-card-left">
-        <%= image_tag "avatar_prof", alt: "alttext", class: "avatar_prof" %> <br>
-        <%= link_to "Perfil completo", class: "perfil-completo-btn" %>
-      </div>
-      <div class="contractor-card-right">
-        <div class="contractor-right-top">
-          <div class="contractor-right-text">
-            <h3 class="name-contractor"><%= user.contractor_name %></h3>
-            <div class="prof-elite">
-              <%= image_tag "elite", alt: "alttext", class: "elite-icon" %>
-              <p class="prof-text">Profesional de Élite</p>
-            </div>
+  <div class="left-all-prof">
+    <div class="headers-contractor">
+      <h2>Profesionales Disponibles</h2>
+      <p>Podrás comunicarte con estos profesionales, ajustar detalles, o cambiar la tarea despues de confirmar tu reserva.</p>
+    </div>
+    <% @users.each do |user| %>
+      <div class="contractor-card">
+        <div class="contractor-card-left">
+          <%= image_tag "avatar_prof", alt: "alttext", class: "avatar_prof" %> <br>
+          <%= link_to "Perfil completo", class: "perfil-completo-btn" %>
+        </div>
+        <div class="contractor-card-right">
+          <div class="contractor-right-top">
+            <div class="contractor-right-text">
+              <h3 class="name-contractor"><%= user.contractor_name %></h3>
+              <div class="prof-elite">
+                <%= image_tag "elite", alt: "alttext", class: "elite-icon" %>
+                <p class="prof-text">Profesional de Élite</p>
+              </div>
 
-            <div class="prof-elite">
-              <%= image_tag "star", alt: "alttext", class: "star-icon" %>
-              <p class="prof-text">100% Reseñas Positivas</p>
-            </div>
+              <div class="prof-elite">
+                <%= image_tag "star", alt: "alttext", class: "star-icon" %>
+                <p class="prof-text">100% Reseñas Positivas</p>
+              </div>
 
-            <div class="prof-elite">
-              <%= image_tag "seguro", alt: "alttext", class: "seguro-icon" %>
-              <p class="prof-text">100% Seguro</p>
+              <div class="prof-elite">
+                <%= image_tag "seguro", alt: "alttext", class: "seguro-icon" %>
+                <p class="prof-text">100% Seguro</p>
+              </div>
+            </div>
+            <div class="contractor-right-price-confirm">
+              <h5 class="contractor-price">20€/hr</h5>
+              <%= link_to "Confirmar", new_enquiry_path(contractor_id: user), class: "confirm-prof-btn" %>
             </div>
           </div>
-          <div class="contractor-right-price-confirm">
-            <h5 class="contractor-price">20€/hr</h5>
-            <%= link_to "Confirmar", new_enquiry_path(contractor_id: user), class: "confirm-prof-btn" %>
+          <p class="user-bio"><%= user.bio %></p>
+        </div>
+      </div>
+    <% end %>
+  </div>
+
+  <div class="right-all-prof">
+    <div class="sort-by-contractor">
+      <p class="ordenar-por">ORDENAR POR:</p>
+      <%= form_tag users_path, method: :get, class: "form-inline" do %>
+        <%= select_tag "sort", options_for_select(%w(Recomendado Disponibles)) %>
+      <% end %>
+    </div>
+
+    <div class="choose-a-date-time">
+      <div class="day-contractor">
+        <div class="header-icon-sort">
+          <%= image_tag "calendar", alt: "alttext", class: "calendar-img" %>
+          <h5>Fecha deseada</h5>
+        </div>
+        <div class="top-two-day">
+          <%= link_to "Urgente", "#", class: "sort-btn top-btn-fst" %>
+          <%= link_to "Mañana", "#", class: "sort-btn top-btn-snd" %>
+        </div>
+        <div class="bottom-two-day">
+          <%= link_to "Esta semana", "#", class: "sort-btn" %>
+          <%= link_to "Escoge fecha", "#", class: "sort-btn escoge-fecha" %>
+        </div>
+      </div>
+
+      <div class="time-contractor">
+        <div class="header-icon-sort">
+          <%= image_tag "reloj", alt: "alttext", class: "reloj-img" %>
+          <h5>Hora deseada</h5>
+        </div>
+        <div class="cont-times">
+          <div class="top-two-time">
+            <%= link_to "08:00 - 13:00", "#", class: "sort-btn morning-time" %>
+            <%= link_to "14:00 - 21:00", "#", class: "sort-btn" %>
+          </div>
+          <p class="especifica-una-hora">o especifica una hora</p>
+          <div class="bottom-time">
+            <%= form_tag users_path, method: :get, class: "form-inline time-form" do %>
+              <%= select_tag "sort", options_for_select(%w(09:00 10:00 11:00 12:00 13:00 14:00 15:00 16:00 17:00 18:00 19:00)) %>
+            <% end %>
           </div>
         </div>
-        <p><%= user.bio %></p>
       </div>
     </div>
-  <% end %>
+  </div>
+</div>
+
+<div class="footer">
+  <div class="image-foot foot-col">
+    <%= image_tag "logo_white", alt: "Fiducia logo blanco", class: "white-logo-foot" %>
+  </div>
+  <div class="first-foot-col foot-col">
+    <h5>TRABAJA CON NOSOTROS</h5>
+    <%= link_to "Empleo", "#", class: "foot-link"  %> <br>
+    <%= link_to "Establecimientos asociados", "#", class: "foot-link"  %> <br>
+    <%= link_to "Repartidores", "#", class: "foot-link"  %> <br>
+    <%= link_to "Fiducia Business", "new_user_session_path", class: "foot-link"  %> <br>
+  </div>
+  <div class="second-foot-col foot-col">
+    <h5>AYUDA</h5>
+    <%= link_to "Preguntas frecuentes", "#", class: "foot-link" %> <br>
+    <%= link_to "Contacto", "#", class: "foot-link" %>
+  </div>
 </div>

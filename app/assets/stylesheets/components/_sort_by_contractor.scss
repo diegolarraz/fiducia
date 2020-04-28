@@ -1,0 +1,110 @@
+.sort-by-contractor {
+  display: flex;
+  align-items: center;
+  margin-right: 11vw;
+  padding-top: 8vh;
+
+  p {
+    margin-bottom: 0px;
+    margin-right: 8px;
+  }
+}
+
+.true-cont-all {
+  display: flex;
+  justify-content: space-between;
+}
+
+.sort-btn {
+  border: 1px solid #000000;
+  color: #000000;
+  padding: 16px;
+  border-radius: 4px;
+
+  &:hover {
+    text-decoration: none;
+    color: #000000;
+  }
+}
+
+.day-contractor {
+  margin-top: 46px;
+  border-radius: 8px;
+  box-shadow: 4px 4px 4px 0.6px rgba(0,0,1,0.04);
+  margin-right: 11vw;
+  padding: 32px;
+  border: 1px solid #7691A0;
+}
+
+.time-contractor {
+  margin-top: 22px;
+  border-radius: 8px;
+  box-shadow: 4px 4px 4px 0.6px rgba(0,0,1,0.04);
+  margin-right: 11vw;
+  padding: 32px;
+  border: 1px solid #7691A0;
+
+}
+
+.bottom-two-day {
+  margin-top: 34px;
+}
+
+.top-btn-fst {
+  padding-left: 34px;
+  padding-right: 34px;
+}
+
+.top-btn-snd {
+  padding-left: 36px;
+  padding-right: 36px;
+  margin-left: 3px;
+}
+
+.top-two-time {
+  margin-bottom: 32px;
+}
+
+.time-form {
+  margin-left: 8vw;
+  width: 52px;
+  background-color: white !important;
+}
+
+.choose-a-date-time {
+  position: sticky;
+  position: -webkit-sticky;
+  top: 20px; /* required */
+}
+
+.top-two-day {
+  margin-bottom: 38px;
+}
+
+.calendar-img {
+  width: 3vw;
+}
+
+.reloj-img {
+  width: 3vw;
+  margin-left: 6px;
+}
+
+.cont-times {
+  text-align: center;
+}
+
+.header-icon-sort {
+  display: flex;
+  margin-bottom: 30px;
+  align-items: center;
+
+  h5 {
+    margin-left: 3px;
+    margin-bottom: 0px;
+  }
+}
+
+.morning-time {
+  margin-right: 3px;
+}
