@@ -1,6 +1,7 @@
 class Enquiry < ApplicationRecord
   belongs_to :user
   belongs_to :contractor, class_name: "User"
+  has_one :job, dependent: :destroy
 
   validates :user_id, presence: true
   validates :contractor_id, presence: true
