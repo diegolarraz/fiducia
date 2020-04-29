@@ -1,2 +1,5 @@
-
-<%= render "shared/profile" %>
+<% if !@user.contractor %>
+  <%= render "shared/user_profile" %>
+<% else %>
+  <%= render "shared/contractor_profile" %>
+<% end %>

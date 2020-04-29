@@ -1,25 +1,4 @@
 <div class="container">
-  <% if !@user.contractor %>
-    <h1>Hi <%= @user.first_name.capitalize %>!</h1>
-    <% if @user.pending_enquiries.empty? %>
-      <h3>No Open Enquiries</h3>
-    <% else %>
-      <h3>Open Enquiries</h3>
-      <% @user.pending_enquiries.each do |enquiry| %>
-        <ul>
-          <li>
-            <div class="enquiry-card">
-            <%= enquiry.title %>
-            <%= enquiry.information %>
-            <%= enquiry.contractor.contractor_name %>
-            <%= enquiry.convert_date %>
-            <%= enquiry.timeslot %>
-            </div>
-          </li>
-        </ul>
-      <% end %>
-    <% end %>
-    <% else %>
     <h1>Hi <%= @user.first_name.capitalize %>!</h1>
     <% if @user.pending_enquiries.empty? %>
       <h3>No Open Enquiries for <%= @user.contractor_name %></h3>
@@ -45,5 +24,4 @@
         </ul>
       <% end %>
     <% end %>
-  <% end %>
 </div>
