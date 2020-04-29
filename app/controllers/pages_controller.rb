@@ -7,5 +7,6 @@ class PagesController < ApplicationController
 
   def profile
     @user = current_user
+    @job = Job.new
   end
 end

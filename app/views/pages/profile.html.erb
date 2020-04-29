@@ -1,3 +1,41 @@
 <div class="container">
-  this will be the profile page
+  <% if !@user.contractor %>
+    <h1>Not contractor</h1>
+    <h3>Open Enquiries</h3>
+    <% @user.pending_enquiries.each do |enquiry| %>
+      <ul>
+        <li>
+          <div class="enquiry-card">
+          <%= enquiry.title %>
+          <%= enquiry.information %>
+          <%= enquiry.contractor.contractor_name %>
+          <%= enquiry.convert_date %>
+          <%= enquiry.timeslot %>
+          </div>
+        </li>
+      </ul>
+    <% end %>
+    <% else %>
+    <h1>Contractor</h1>
+    <h3>Open Enquiries</h3>
+    <% @user.pending_enquiries.each do |enquiry| %>
+      <ul>
+        <li>
+          <div class="contractor-enquiry-card">
+            <%= enquiry.title %>
+            <%= enquiry.information %>
+            <%= enquiry.convert_date %>
+            <%= enquiry.timeslot %>
+            <%= simple_form_for @job,
+              wrapper: :inline_form,
+              html: { class: 'form-inline' } do |f| %>
+              <%= f.input :time, collection: enquiry.generate_times %>
+              <%= f.hidden_field "enquiry_id", value: enquiry.id %>
+              <%= f.submit "Book This Job" %>
+            <% end %>
+          </div>
+        </li>
+      </ul>
+    <% end %>
+  <% end %>
 </div>
