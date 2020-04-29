@@ -3,6 +3,10 @@ class UsersController < ApplicationController
     @users = User.joins(:professions).where(professions: { id: params[:profession]})
   end
 
+  def show
+    @user = User.find(params[:id])
+  end
+
   def edit
     @user = User.find(params[:id])
     @user.become_contractor if params[:contractor]

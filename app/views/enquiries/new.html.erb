@@ -1,11 +1,11 @@
 <div class="container">
   <%= simple_form_for [ @enquiry ] do |f| %>
-    <%= f.input :title %>
-    <%= f.input :property_address %>
-    <%= f.input :information %>
+    <%= f.input :title, label: "Título" %>
+    <%= f.input :property_address, label: "Dirección" %>
+    <%= f.input :information, label: "Descripción del trabajo" %>
     <%= f.input :date, html5: true %>
-    <%= f.input :timeslot, collection: ['AM', 'PM', 'All Day']%>
+    <%= f.input :timeslot, label: "Selecciona su disponibilidad", collection: ['AM', 'PM', 'Todo el día']%>
     <%= f.hidden_field "contractor_id", value: @contractor.id %>
-    <%= f.submit %>
+    <%= f.submit "Confirmar" %>
   <% end %>
 </div>
