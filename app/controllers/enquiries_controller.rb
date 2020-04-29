@@ -2,14 +2,13 @@ class EnquiriesController < ApplicationController
   def new
     @enquiry = Enquiry.new
     @contractor = User.find(params[:contractor_id])
-    # raise
+
   end
 
   def create
     @enquiry = Enquiry.new(enquiry_params)
     @enquiry.user = current_user
     @enquiry.contractor = User.find(params['enquiry']['contractor_id'].to_i)
-    # raise
     if @enquiry.save
       redirect_to profile_path
     else
@@ -21,6 +20,8 @@ class EnquiriesController < ApplicationController
   end
 
   def update
+    @enquiry = Enquiry.find(params[:job][:enquiry_id].to_i)
+    raise
   end
 
   def destroy
@@ -29,7 +30,7 @@ class EnquiriesController < ApplicationController
   private
 
   def enquiry_params
-    params.require(:enquiry).permit(:title, :property_address, :information, :timeslots, :contractor_id)
+    params.require(:enquiry).permit(:title, :property_address, :information, :timeslot, :date, :contractor_id)
   end
 
 end

@@ -41,4 +41,8 @@ class User < ApplicationRecord
     end
   end
 
+  def pending_enquiries
+    self.contractor ? self.contractor_enquiries.where(confirmed: [nil, false]) : self.enquiries.where(confirmed: [nil, false])
+  end
+
 end
