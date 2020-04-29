@@ -12,6 +12,8 @@ class User < ApplicationRecord
   has_many :user_professions
   has_many :professions, through: :user_professions
   has_many :reviews
+  has_many :jobs, through: :enquiries
+  has_many :contractor_jobs, through: :contractor_enquiries, source: :job
 
   # validates :first_name, presence: true
   # validates :last_name, presence: true
