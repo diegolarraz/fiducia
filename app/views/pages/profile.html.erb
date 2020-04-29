@@ -2,7 +2,6 @@
   <% if !@user.contractor %>
     <h1>Not contractor</h1>
     <h3>Open Enquiries</h3>
-    <% raise %>
     <% @user.pending_enquiries.each do |enquiry| %>
       <ul>
         <li>

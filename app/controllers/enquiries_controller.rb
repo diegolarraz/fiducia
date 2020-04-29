@@ -21,6 +21,8 @@ class EnquiriesController < ApplicationController
   end
 
   def update
+    @enquiry = Enquiry.find(params[:job][:enquiry_id].to_i)
+    raise
   end
 
   def destroy

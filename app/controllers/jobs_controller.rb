@@ -9,13 +9,11 @@ class JobsController < ApplicationController
     @job.enquiry = Enquiry.find(params[:job][:enquiry_id].to_i)
     @job.time = DateTime.new(@job.enquiry.date.year, @job.enquiry.date.month, @job.enquiry.date.mday, Time.parse(params[:job][:time]).hour, Time.parse(params[:job][:time]).min, 0)
     if @job.save
-      @job.enquiry.confirm
+      @job.enquiry.update(confirmed: true)
       redirect_to profile_path
     else
-      raise
+      redirect_to profile_path
     end
-    # @job.time = Time.parse(params[:job][:time], @job.enquiry.date)
-    # raise
   end
 
   def edit

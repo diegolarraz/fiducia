@@ -23,7 +23,4 @@ class Enquiry < ApplicationRecord
     end
   end
 
-  def confirm
-    self.confirmed = true
-  end
 end
