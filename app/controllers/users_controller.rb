@@ -1,6 +1,7 @@
 class UsersController < ApplicationController
   def index
     @users = User.joins(:professions).where(professions: { id: params[:profession]})
+    @profession = Profession.find(params[:profession])
   end
 
   def show

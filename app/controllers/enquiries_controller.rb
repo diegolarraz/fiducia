@@ -2,13 +2,15 @@ class EnquiriesController < ApplicationController
   def new
     @enquiry = Enquiry.new
     @contractor = User.find(params[:contractor_id])
-
+    @profession = Profession.find(params[:profession])
   end
 
   def create
     @enquiry = Enquiry.new(enquiry_params)
     @enquiry.user = current_user
     @enquiry.contractor = User.find(params['enquiry']['contractor_id'].to_i)
+    # @profession = Profession.find(params[:profession])
+    # # @enquiry.title = "#{@profession.name} en #{@enquiry.property_address}"
     if @enquiry.save
       redirect_to profile_path
     else
