@@ -14,7 +14,7 @@ class EnquiriesController < ApplicationController
     if @enquiry.save
       redirect_to profile_path
     else
-      render :new
+      render :create
     end
   end
 

@@ -2,6 +2,7 @@ class UsersController < ApplicationController
   def index
     @users = User.joins(:professions).where(professions: { id: params[:profession]})
     @profession = Profession.find(params[:profession])
+    @enquiry = Enquiry.new()
   end
 
   def show
@@ -31,5 +32,4 @@ class UsersController < ApplicationController
   def user_params
     params.require(:user).permit(:contractor_name, :bio, :logo)
   end
-
 end
