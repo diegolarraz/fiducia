@@ -11,8 +11,7 @@ gem 'redis'
 
 #datepicker for simple forms
 gem 'datetime_picker_input'
-
-
+gem 'turbolinks_render'
 gem 'autoprefixer-rails'
 gem 'font-awesome-sass', '~> 5.12.0'
 gem 'sassc-rails'
