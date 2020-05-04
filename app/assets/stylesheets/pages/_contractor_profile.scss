@@ -4,5 +4,80 @@
 
 .container-enquiries {
   // border: 1px solid rgba(20, 20, 20, 0.3);
-  // padding: 16px;
+  padding: 16px;
+  border: 1px solid rgba(30, 30, 30, 0.3);
+  border-radius: 10px;
+
+  h3 {
+    margin-bottom: 16px;
+  }
+
+  p {
+    margin: 0;
+  }
 }
+
+.contractor-enquiry-card {
+  display: flex;
+  align-items: stretch;
+  justify-content: space-around;
+  border: 1px solid rgba(30, 30, 30, 0.3);
+  padding: 24px 8px;
+  border-radius: 10px;
+}
+
+.contractor-enquiry-card-date {
+  border-right: 1px solid rgba(30, 30, 30, 0.3);
+  flex: auto;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  h5 {
+    margin-bottom: 0;
+  }
+}
+.contractor-enquiry-card-job-info {
+  text-align: center;
+  border-right: 1px solid rgba(30, 30, 30, 0.3);
+  flex: auto;
+}
+
+.contractor-enquiry-card-user-info {
+  text-align: center;
+  border-right: 1px solid rgba(30, 30, 30, 0.3);
+  flex: auto;
+}
+
+.contractor-enquiry-card-form {
+  text-align: center;
+  display: flex;
+  flex: auto;
+  justify-content: center;
+
+  .form-control {
+    border-radius: 10px;
+  }
+}
+
+.btn-book-job {
+  border: 1px solid #848157;
+  border-radius: 10px;
+  text-align: center;
+  text-decoration: none;
+  color: #848157;
+  padding: 8px;
+  background-color: white;
+  margin-left: 4px;
+
+  &:hover {
+    text-decoration: none;
+    color: #848157;
+    background-color: rgba(219, 216, 174, 0.25);
+    transition: all .2s ease-in-out;
+    transition: 0.3s;
+  }
+}
+
+

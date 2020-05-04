@@ -11,17 +11,26 @@
       <h3>Open Enquiries</h3>
       <% @user.pending_enquiries.each do |enquiry| %>
         <div class="contractor-enquiry-card">
-          <%= enquiry.title %>
-          <%= enquiry.information %>
-          <%= enquiry.convert_date %>
-          <%= enquiry.timeslot %>
-          <%= simple_form_for @job,
+          <div class="contractor-enquiry-card-date">
+            <h5><%= enquiry.convert_date %> <%= enquiry.timeslot %></h5>
+          </div>
+          <div class="contractor-enquiry-card-job-info">
+            <h6><%= enquiry.title %></h6>
+            <p><%= enquiry.information %></p>
+          </div>
+          <div class="contractor-enquiry-card-user-info">
+            <h6><%= enquiry.user.first_name.capitalize %> <%= enquiry.user.last_name.capitalize %></h6>
+            <p><%= enquiry.property_address %></p>
+          </div>
+          <div class="contractor-enquiry-card-form">
+            <%= simple_form_for @job,
             wrapper: :inline_form,
             html: { class: 'form-inline' } do |f| %>
-            <%= f.submit "Book This Job" %>
-            <%= f.input :time, collection: enquiry.generate_times %>
-            <%= f.hidden_field "enquiry_id", value: enquiry.id %>
-          <% end %>
+              <%= f.input :time, collection: enquiry.generate_times %>
+              <%= f.hidden_field "enquiry_id", value: enquiry.id %>
+              <%= f.submit "Book This Job", class: 'btn-book-job' %>
+            <% end %>
+          </div>
         </div>
       <% end %>
     <% end %>
