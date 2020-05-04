@@ -12,15 +12,16 @@
       <% @user.pending_enquiries.each do |enquiry| %>
         <div class="contractor-enquiry-card">
           <div class="contractor-enquiry-card-date">
-            <h5><%= enquiry.convert_date %> <%= enquiry.timeslot %></h5>
+            <h5><%= enquiry.convert_date %></h5>
+            <p><%= enquiry.timeslot %></p>
           </div>
           <div class="contractor-enquiry-card-job-info">
             <h6><%= enquiry.title %></h6>
-            <p><%= enquiry.information %></p>
+            <p><%= enquiry.property_address %></p>
           </div>
           <div class="contractor-enquiry-card-user-info">
-            <h6><%= enquiry.user.first_name.capitalize %> <%= enquiry.user.last_name.capitalize %></h6>
-            <p><%= enquiry.property_address %></p>
+            <h6>Para</h6>
+            <p><%= enquiry.user.first_name.capitalize %> <%= enquiry.user.last_name.capitalize %></p>
           </div>
           <div class="contractor-enquiry-card-form">
             <%= simple_form_for @job,
