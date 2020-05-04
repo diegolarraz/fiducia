@@ -1,0 +1,26 @@
+<div class="container">
+  <div class="container-enquiries">
+    <h1>Hi <%= @user.first_name.capitalize %>!</h1>
+    <% if @user.pending_enquiries.empty? %>
+      <h3>No Open Enquiries</h3>
+    <% else %>
+      <h3>Open Enquiries</h3>
+      <% @user.pending_enquiries.each do |enquiry| %>
+        <ul>
+          <li>
+            <div class="enquiry-card">
+            <%= enquiry.title %>
+            <%= enquiry.information %>
+            <%= enquiry.contractor.contractor_name %>
+            <%= enquiry.convert_date %>
+            <%= enquiry.timeslot %>
+            </div>
+          </li>
+        </ul>
+      <% end %>
+    <% end %>
+  </div>
+  <div class="container-jobs">
+
+  </div>
+</div>
