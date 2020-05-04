@@ -2,10 +2,10 @@
   margin-top: 16px;
 }
 
-.container-enquiries {
+.container-profile {
   // border: 1px solid rgba(20, 20, 20, 0.3);
-  padding: 16px;
-  padding-bottom: 4px;
+  padding: 40px;
+  padding-bottom: 16px;
   border: 1px solid rgba(30, 30, 30, 0.3);
   border-radius: 10px;
 
@@ -18,28 +18,29 @@
   }
 }
 
-.contractor-enquiry-card {
+.contractor-profile-card {
   display: flex;
   align-items: stretch;
   justify-content: space-around;
   border: 1px solid rgba(30, 30, 30, 0.3);
   padding: 24px 8px;
   border-radius: 10px;
-  margin-bottom: 12px;
+  margin-bottom: 24px;
 }
 
-.contractor-enquiry-card-date {
+
+.contractor-card-date {
   border-right: 1px solid rgba(30, 30, 30, 0.3);
   flex: 1;
   text-align: center;
 }
-.contractor-enquiry-card-job-info {
+.contractor-card-job-info {
   text-align: center;
   border-right: 1px solid rgba(30, 30, 30, 0.3);
   flex: 1;
 }
 
-.contractor-enquiry-card-user-info {
+.contractor-card-user-info {
   text-align: center;
   border-right: 1px solid rgba(30, 30, 30, 0.3);
   flex: 1;
@@ -56,6 +57,13 @@
   }
 }
 
+.contractor-enquiry-card-cancel {
+  display: flex;
+  flex: 1;
+  justify-content: center;
+  align-items: center;
+}
+
 .btn-book-job {
   border: 1px solid #848157;
   border-radius: 10px;
@@ -70,6 +78,29 @@
     text-decoration: none;
     color: #848157;
     background-color: rgba(219, 216, 174, 0.25);
+    transition: all .2s ease-in-out;
+    transition: 0.3s;
+  }
+}
+
+.nav-label-custom {
+  margin-right: 0;
+}
+
+.btn-cancel-job {
+  border: 1px solid #BE5775;
+  border-radius: 10px;
+  text-align: center;
+  text-decoration: none;
+  color: #BE5775;
+  padding: 8px;
+  background-color: white;
+  margin-left: 4px;
+
+  &:hover {
+    text-decoration: none;
+    color: #BE5775;
+    background-color: rgba(190, 87, 117, 0.25);
     transition: all .2s ease-in-out;
     transition: 0.3s;
   }
