@@ -8,7 +8,8 @@ gem 'pg', '~> 0.21'
 gem 'puma'
 gem 'rails', '6.0.2.1'
 gem 'redis'
-
+#cloudinary
+gem 'dotenv-rails', groups: [:development, :test]
 #datepicker for simple forms
 gem 'datetime_picker_input'
 gem 'turbolinks_render'
