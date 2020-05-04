@@ -18,7 +18,7 @@ class Enquiry < ApplicationRecord
     if self.timeslot == "AM"
       return %w[09:00 10:00 11:00 12:00]
     elsif self.timeslot == "PM"
-      return %w[13:00 14:00 15:00 16:00 17::0 18:00 19:00]
+      return %w[13:00 14:00 15:00 16:00 17:00 18:00 19:00]
     else
       return %w[09:00 10:00 11:00 12:00 13:00 14:00 15:00 16:00 17:00 18:00 19:00]
     end

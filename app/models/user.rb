@@ -44,7 +44,13 @@ class User < ApplicationRecord
   end
 
   def pending_enquiries
-    self.contractor ? self.contractor_enquiries.where(confirmed: [nil, false]) : self.enquiries.where(confirmed: [nil, false])
+    enquiries = self.contractor ? self.contractor_enquiries.where(confirmed: [nil, false]) : self.enquiries.where(confirmed: [nil, false])
+    enquiries.sort_by { |enquiry| enquiry.date}
+  end
+
+  def pending_jobs
+    jobs = self.contractor ? self.contractor_jobs.where(completed: [nil, false]) : self.jobs.where(completed: [nil, false])
+    jobs.sort_by { |job| job.time}
   end
 
 end
