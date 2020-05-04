@@ -1,0 +1,38 @@
+.pop-up-background {
+  width: 100%;
+  height: 100vh;
+  background-color: rgba(0, 0, 0 , 0.7);
+  position: absolute;
+  top: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.pop-up-content {
+  width: 60vw;
+  height: 70vh;
+  background-color: white;
+  border-radius: 4px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.pop-up-contents {
+  width: 100%;
+  margin-left: 20vw;
+}
+
+.confirmar-btn {
+  margin-left: 4vw;
+  margin-top: 3vh;
+}
+
+.top-pop-up {
+  margin-left: 4vw;
+}
+
+.contractor-pop-name {
+  margin-left: 1vw;
+}

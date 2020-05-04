@@ -8,7 +8,7 @@
       <div class="contractor-card">
         <div class="contractor-card-left">
           <%= image_tag "avatar_prof", alt: "alttext", class: "avatar_prof" %> <br>
-          <%= link_to "Perfil completo", class: "perfil-completo-btn" %>
+          <%= link_to "Perfil completo", user_path(user), class: "perfil-completo-btn" %>
         </div>
         <div class="contractor-card-right">
           <div class="contractor-right-top">
@@ -31,7 +31,7 @@
             </div>
             <div class="contractor-right-price-confirm">
               <h5 class="contractor-price">20€/hr</h5>
-              <%= link_to "Confirmar", new_enquiry_path(contractor_id: user), class: "confirm-prof-btn" %>
+              <%= link_to "Confirmar", new_enquiry_path(contractor_id: user, profession: @profession), class: "confirm-prof-btn", remote: true, method: :get %>
             </div>
           </div>
           <p class="user-bio"><%= user.bio %></p>
