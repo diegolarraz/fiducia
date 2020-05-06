@@ -10,9 +10,7 @@
     <%= f.input :last_name,
                 required: true,
                 input_html: { autocomplete: "last name" } %>
-    <%= f.input :age,
-                required: true,
-                input_html: { autocomplete: "age" } %>
+    <%= f.input :image, as: :file %>
     <%= f.input :phone_number,
                 required: true,
                 input_html: { autocomplete: "phone number" } %>
