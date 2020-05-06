@@ -5,8 +5,8 @@
       <p class="descripcion-landing">No te molestes, recibe ayuda de miles de profesionales de confianza para cualquier reparación, reforma o limpieza de tu hogar.</p>
     </div>
     <div class="landing-top-images">
-      <%= image_tag "shape_landing", alt: "imagen decorativa", class: "landing-square" %>
-      <%= image_tag "regandoo", alt: "señor regando", class: "regando-pic" %>
+      <%= image_tag "shape_landing.png", alt: "imagen decorativa", class: "landing-square" %>
+      <%= image_tag "regandoo.png", alt: "señor regando", class: "regando-pic" %>
     </div>
 
   </div>
@@ -28,9 +28,9 @@
         <div class="col-3 mb-4">
           <div class="card">
             <% if profession.name == "Albañilería" %>
-              <%= image_tag "Albanileria", alt: "alttext" %>
+              <%= image_tag "Albanileria.jpg", alt: "alttext" %>
             <% else %>
-              <%= image_tag profession.name, alt: "alttext" %>
+              <%= image_tag "#{profession.name}.jpg", alt: "alttext" %>
             <% end %>
             <div class="card-body">
               <h5 class="card-title"><%= profession.name %></h5>
@@ -48,7 +48,7 @@
   <div class="join-cards">
     <div class="join-card">
       <div class="top-part-join-card">
-        <%= image_tag "empieza", alt: "empieza", class: "join-card-image" %>
+        <%= image_tag "empieza.png", alt: "empieza", class: "join-card-image" %>
       </div>
       <div class="join-card-bottom">
         <h4 class="join-heading">Profesionales</h4>
@@ -58,10 +58,10 @@
       <%= link_to "Trabaja con nosotros", "#", class: "join-btn" %>
     </div>
 
-    <%= image_tag "landingline", alt: "alttext", class: "landingline" %>
+    <%= image_tag "landingline.png", alt: "alttext", class: "landingline" %>
 
     <div class="join-card">
-      <%= image_tag "profesional", alt: "alttext", class: "join-card-image" %>
+      <%= image_tag "profesional.png", alt: "alttext", class: "join-card-image" %>
       <div class="join-card-bottom">
         <h4 class="join-heading">Empieza Proyectos</h4>
         <h5>Contrata profesionales</h5>
@@ -74,7 +74,7 @@
 
 <div class="footer">
   <div class="image-foot foot-col">
-    <%= image_tag "logo_white", alt: "Fiducia logo blanco", class: "white-logo-foot" %>
+    <%= image_tag "logo_white.png", alt: "Fiducia logo blanco", class: "white-logo-foot" %>
   </div>
   <div class="first-foot-col foot-col">
     <h5>TRABAJA CON NOSOTROS</h5>

@@ -7,7 +7,7 @@
     <% @users.each do |user| %>
       <div class="contractor-card">
         <div class="contractor-card-left">
-          <%= image_tag "avatar_prof", alt: "alttext", class: "avatar_prof" %> <br>
+          <%= image_tag "avatar_prof.png", alt: "alttext", class: "avatar_prof" %> <br>
           <%= link_to "Perfil completo", user_path(user), class: "perfil-completo-btn" %>
         </div>
         <div class="contractor-card-right">
@@ -15,17 +15,17 @@
             <div class="contractor-right-text">
               <h3 class="name-contractor"><%= user.contractor_name %></h3>
               <div class="prof-elite">
-                <%= image_tag "elite", alt: "alttext", class: "elite-icon" %>
+                <%= image_tag "elite.png", alt: "alttext", class: "elite-icon" %>
                 <p class="prof-text">Profesional de Élite</p>
               </div>
 
               <div class="prof-elite">
-                <%= image_tag "star", alt: "alttext", class: "star-icon" %>
+                <%= image_tag "star.png", alt: "alttext", class: "star-icon" %>
                 <p class="prof-text">100% Reseñas Positivas</p>
               </div>
 
               <div class="prof-elite">
-                <%= image_tag "seguro", alt: "alttext", class: "seguro-icon" %>
+                <%= image_tag "seguro.png", alt: "alttext", class: "seguro-icon" %>
                 <p class="prof-text">100% Seguro</p>
               </div>
             </div>
@@ -51,7 +51,7 @@
     <div class="choose-a-date-time">
       <div class="day-contractor">
         <div class="header-icon-sort">
-          <%= image_tag "calendar", alt: "alttext", class: "calendar-img" %>
+          <%= image_tag "calendar.png", alt: "alttext", class: "calendar-img" %>
           <h5>Fecha deseada</h5>
         </div>
         <div class="top-two-day">
@@ -66,7 +66,7 @@
 
       <div class="time-contractor">
         <div class="header-icon-sort">
-          <%= image_tag "reloj", alt: "alttext", class: "reloj-img" %>
+          <%= image_tag "reloj.png", alt: "alttext", class: "reloj-img" %>
           <h5>Hora deseada</h5>
         </div>
         <div class="cont-times">
@@ -88,7 +88,7 @@
 
 <div class="footer">
   <div class="image-foot foot-col">
-    <%= image_tag "logo_white", alt: "Fiducia logo blanco", class: "white-logo-foot" %>
+    <%= image_tag "logo_white.png", alt: "Fiducia logo blanco", class: "white-logo-foot" %>
   </div>
   <div class="first-foot-col foot-col">
     <h5>TRABAJA CON NOSOTROS</h5>
