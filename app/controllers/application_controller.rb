@@ -16,7 +16,8 @@ class ApplicationController < ActionController::Base
                                         :contractor_name,
                                         :bio,
                                         :profile_picture,
-                                        :logo
+                                        :logo,
+                                        :image
                                       ])
 
     # additional fields to edit
@@ -32,7 +33,8 @@ class ApplicationController < ActionController::Base
                                         :contractor_name,
                                         :bio,
                                         :profile_picture,
-                                        :logo
+                                        :logo,
+                                        :image
                                       ])
   end
 end

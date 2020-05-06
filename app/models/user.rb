@@ -14,7 +14,7 @@ class User < ApplicationRecord
   has_many :reviews
   has_many :jobs, through: :enquiries
   has_many :contractor_jobs, through: :contractor_enquiries, source: :job
-
+  has_one_attached :image
   # validates :first_name, presence: true
   # validates :last_name, presence: true
   # validates :email, presence: true, uniqueness: true
