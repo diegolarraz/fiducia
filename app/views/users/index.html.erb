@@ -7,7 +7,11 @@
     <% @users.each do |user| %>
       <div class="contractor-card">
         <div class="contractor-card-left">
-          <%= image_tag "avatar_prof.png", alt: "alttext", class: "avatar_prof" %> <br>
+          <% if user.image.attached? %>
+            <%= cl_image_tag @user.image.key, alt: "alttext", class: "avatar_prof" %> <br>
+          <% else %>
+            <%= image_tag "avatar.png", alt: "alttext", class: "avatar_prof" %> <br>
+          <% end %>
           <%= link_to "Perfil completo", user_path(user), class: "perfil-completo-btn" %>
         </div>
         <div class="contractor-card-right">
