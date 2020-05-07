@@ -1,9 +1,11 @@
 .pop-up-background {
-  width: 100%;
+  width: 100vw;
   height: 100vh;
   background-color: rgba(0, 0, 0 , 0.7);
-  position: absolute;
+  position: fixed;
   top: 0;
+  bottom: 0;
+  z-index: 20;
   display: flex;
   justify-content: center;
   align-items: center;
