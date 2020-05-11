@@ -1,5 +1,5 @@
-<h2>Sign up</h2>
-
+<% if params[:contractor] %>
+<h2>Registrate como un profesional</h2>
 <%= simple_form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
   <%= f.error_notification %>
 
@@ -36,3 +36,42 @@
 <% end %>
 
 <%= render "devise/shared/links" %>
+<% else %>
+<h2>Registrate con Fiducia</h2>
+<%= simple_form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
+  <%= f.error_notification %>
+
+  <div class="form-inputs">
+    <%= f.input :first_name,
+                required: true,
+                input_html: { autocomplete: "first name" } %>
+    <%= f.input :last_name,
+                required: true,
+                input_html: { autocomplete: "last name" } %>
+    <%= f.input :image, as: :file %>
+    <%= f.input :phone_number,
+                required: true,
+                input_html: { autocomplete: "phone number" } %>
+    <%= f.input :email,
+                required: true,
+                autofocus: true,
+                input_html: { autocomplete: "email" }%>
+    <%= f.input :location,
+                required: true,
+                input_html: { autocomplete: "location" } %>
+    <%= f.input :password,
+                required: true,
+                hint: ("#{@minimum_password_length} characters minimum" if @minimum_password_length),
+                input_html: { autocomplete: "new-password" } %>
+    <%= f.input :password_confirmation,
+                required: true,
+                input_html: { autocomplete: "new-password" } %>
+  </div>
+
+  <div class="form-actions">
+    <%= f.button :submit, "Sign up" %>
+  </div>
+<% end %>
+
+<%= render "devise/shared/links" %>
+<% end %>
