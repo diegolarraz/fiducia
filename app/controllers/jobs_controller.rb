@@ -20,12 +20,26 @@ class JobsController < ApplicationController
   end
 
   def update
+    @job = Job.find(params[:id])
+    if params[:completed] == 'true'
+      @job.mark_as_complete
+      # raise
+      redirect_to profile_path
+    else
+      @job.update(job_params)
+    end
   end
 
   def destroy
     @job = Job.find(params[:id])
     @job.destroy
     redirect_to profile_path
+  end
+
+  private
+
+  def job_params
+    params.require(:job).permit(:completed)
   end
 
 end

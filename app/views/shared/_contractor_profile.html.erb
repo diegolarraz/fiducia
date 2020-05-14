@@ -63,9 +63,13 @@
                             method: :delete,
                             data: { confirm: "Are you sure?" },
                             class: 'btn-cancel-job' %>
+                <%= link_to "Mark as complete",
+                            job_path(job, completed: true),
+                            method: :patch,
+                            class: 'btn-book-job' %>
               </div>
-            </div>
           <% end %>
+            </div>
         </div>
     </div>
   </div>
