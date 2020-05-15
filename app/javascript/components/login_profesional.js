@@ -1,4 +1,5 @@
-const checkContractor = document.querySelector("#user_contractor");
+export const loginProfesional = () => {
+  const checkContractor = document.querySelector("#user_contractor");
   checkContractor.addEventListener('click', (event) => {
   const form = document.querySelector(".sign-up-form-fields");
   form.insertAdjacentHTML("beforeend",
@@ -14,3 +15,4 @@ const checkContractor = document.querySelector("#user_contractor");
     </div>`
   );
 });
+};
