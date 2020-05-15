@@ -7,6 +7,7 @@
     <% @users.each do |user| %>
       <div class="contractor-card">
         <div class="contractor-card-left">
+
           <% if user.image.attached? %>
             <%= cl_image_tag @user.image.key, alt: "alttext", class: "avatar_prof" %> <br>
           <% else %>
