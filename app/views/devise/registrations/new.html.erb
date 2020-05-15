@@ -5,7 +5,7 @@
 <%= simple_form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
   <%= f.error_notification %>
 
-  <div class="form-inputs">
+  <div class="form-inputs sign-up-form-fields">
     <%= f.input :first_name,
                 required: true,
                 input_html: { autocomplete: "first name" },
@@ -36,11 +36,7 @@
     <%= f.input :password_confirmation,
                 required: true,
                 input_html: { autocomplete: "new-password" }, label: "Repite tu Contraseña" %>
-    <%= f.input :contractor, label: "Rellena para registrarte como profesional", check_box_tag: "true" %>
-    <%= f.input :contractor_name, label: "Nombre de compañia" %>
-    <%= f.input :bio,
-                required: false,
-                input_html: { autocomplete: "bio" } %>
+    <%= f.input :contractor, label: "Rellena para registrarte como profesional", check_box_tag: "true", class: "check-contractor", id: "contractor-check" %>
   </div>
 
   <div class="form-actions">
