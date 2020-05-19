@@ -18,18 +18,24 @@
         <div id="enquiries" class="tab-pane fade show active">
           <% @user.pending_enquiries.each do |enquiry| %>
             <div class="contractor-profile-card">
-              <div class="contractor-card-date">
-                <h5><%= enquiry.convert_date %></h5>
-                <p><%= enquiry.timeslot %></p>
+              <div class="hoverable d-flex">
+                <div class="contractor-card-date">
+                  <h5><%= enquiry.convert_date %></h5>
+                  <p><%= enquiry.timeslot %></p>
+                </div>
+                <div class="contractor-card-job-info">
+                  <h6><%= enquiry.title %></h6>
+                  <p><%= enquiry.property_address %></p>
+                </div>
+                <div class="contractor-card-user-info">
+                  <h6>Para</h6>
+                  <p><%= enquiry.user.first_name.capitalize %> <%= enquiry.user.last_name.capitalize %></p>
+                </div>
+
               </div>
-              <div class="contractor-card-job-info">
-                <h6><%= enquiry.title %></h6>
-                <p><%= enquiry.property_address %></p>
-              </div>
-              <div class="contractor-card-user-info">
-                <h6>Para</h6>
-                <p><%= enquiry.user.first_name.capitalize %> <%= enquiry.user.last_name.capitalize %></p>
-              </div>
+            <div class="contractor-enquiry-card-info hidden">
+              <p><%= enquiry.information %></p>
+            </div>
               <div class="contractor-enquiry-card-form">
                 <%= simple_form_for @job,
                 wrapper: :inline_form,
@@ -45,17 +51,22 @@
         <div id="jobs" class="tab-pane fade in active">
           <% @user.pending_jobs.each do |job| %>
             <div class="contractor-profile-card">
-              <div class="contractor-card-date">
-                <h5><%= job.display_date %></h5>
-                <p><%= job.display_time %></p>
+              <div class="hoverable d-flex">
+                <div class="contractor-card-date">
+                  <h5><%= job.display_date %></h5>
+                  <p><%= job.display_time %></p>
+                </div>
+                <div class="contractor-card-job-info">
+                  <h6><%= job.enquiry.title %></h6>
+                  <p><%= job.enquiry.property_address %></p>
+                </div>
+                <div class="contractor-card-user-info">
+                  <h6>Para</h6>
+                  <p><%= job.enquiry.user.first_name.capitalize %> <%= job.enquiry.user.last_name.capitalize %></p>
+                </div>
               </div>
-              <div class="contractor-card-job-info">
-                <h6><%= job.enquiry.title %></h6>
-                <p><%= job.enquiry.property_address %></p>
-              </div>
-              <div class="contractor-card-user-info">
-                <h6>Para</h6>
-                <p><%= job.enquiry.user.first_name.capitalize %> <%= job.enquiry.user.last_name.capitalize %></p>
+              <div class="hidden">
+                <%= job.enquiry.information %>
               </div>
               <div class="contractor-enquiry-card-cancel">
                 <%= link_to "Cancel Job",

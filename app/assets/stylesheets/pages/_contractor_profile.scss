@@ -26,6 +26,7 @@
   padding: 24px 8px;
   border-radius: 10px;
   margin-bottom: 24px;
+  height: 116px;
 }
 
 
@@ -62,6 +63,16 @@
   flex: 1;
   justify-content: center;
   align-items: center;
+}
+
+.hidden {
+  display: none;
+  flex: 3;
+}
+
+.hoverable {
+  flex: 3;
+  transition: 0.3s;
 }
 
 .btn-book-job {
