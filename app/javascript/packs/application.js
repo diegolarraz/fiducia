@@ -4,3 +4,4 @@ require("channels")
 require("custom/cardInfoDisplay")
 
 import "bootstrap";
+import { loginProfesional } from "../components/login_profesional"
