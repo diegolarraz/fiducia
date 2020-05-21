@@ -53,7 +53,7 @@
 .searches {
   margin-left: 11vw;
   border-radius: 20px;
-  margin-bottom: 140px;
+  margin-bottom: 16px;
   border: 1px solid #6B717E;
   max-width: 400px;
 }
@@ -144,6 +144,28 @@
 
 .join-us-box {
   margin-bottom: 130px;
+}
+
+.coming_soon {
+  margin-left: 18vw;
+  text-decoration: none;
+  color: #6B717E;
+  border: 1px solid #6B717E;
+  padding: 12px;
+  border-radius: 10px;
+
+    &:hover {
+      text-decoration: none;
+      color: #6B717E;
+      transform: scale(1.05);
+      background-color: rgba(107, 113, 126, 0.15);
+      transition: 0.3s;
+    }
+}
+
+.or {
+  margin-left: 26vw;
+  margin-bottom: 20px;
 }
 
 

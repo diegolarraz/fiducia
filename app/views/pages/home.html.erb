@@ -18,6 +18,8 @@
         placeholder: "Busca tu reparación"
       %>
   <% end %>
+  <h6 class="or">- o -</h6>
+  <%= link_to "¡Empieza tu renovacion!", coming_soon_path, class: "coming_soon" %>
 </div>
 
 <div class="cont1">
@@ -34,7 +36,7 @@
             <% end %>
             <div class="card-body">
               <h5 class="card-title"><%= profession.name %></h5>
-              <%= link_to "Precio desde #{profession.cost} €", users_path(profession: profession), class: "btn" %>
+              <%= link_to "Precio desde #{profession.cost.to_i} €", users_path(profession: profession), class: "btn" %>
             </div>
           </div>
         </div>
