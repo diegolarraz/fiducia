@@ -13,13 +13,13 @@ document.querySelector(".true-cont-all").insertAdjacentHTML('beforeend',
         </div>
         <div class="pop-up-form">
           <%= simple_form_for [ @enquiry ] do |f| %>
+            <%= f.input :title, label: "Título" %>
             <%= f.input :property_address, label: "Dirección" %>
             <%= f.input :information, label: "Descripción del trabajo" %>
             <%= f.input :date, html5: true, label: "Fecha" %>
             <%= f.input :timeslot, label: "Selecciona su disponibilidad", collection: ['Mañana', 'Tarde', 'Todo el día']%>
             <%= f.hidden_field "contractor_id", value: @contractor.id %>
-            <%= f.hidden_field "title", value: "#{@profession.name} en #{@enquiry.property_address}" %>
-            <%= f.submit "Confirmar", class: "confirmar-btn" %>
+            <%= f.submit "Confirmar" %>
           <% end %>
         </div>
       </div>
