@@ -1,7 +1,7 @@
 <div class="container">
 
   <div class="greeting">
-    <h1>Hi <%= @user.first_name.capitalize %>!</h1>
+    <h1>Hola <%= @user.first_name.capitalize %>!</h1>
   </div>
 
   <div class="container-profile">
@@ -61,7 +61,7 @@
                 <%= link_to "Cancel Job",
                             job_path(job),
                             method: :delete,
-                            data: { confirm: "Are you sure?" },
+                            data: { confirm: "¿Estás seguro?" },
                             class: 'btn-cancel-job' %>
               </div>
             </div>

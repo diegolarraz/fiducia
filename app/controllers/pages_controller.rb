@@ -8,6 +8,7 @@ class PagesController < ApplicationController
   def profile
     @user = current_user
     @job = Job.new
+    @enquiries = @user.enquiries
   end
 
   def coming_soon
