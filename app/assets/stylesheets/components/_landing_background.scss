@@ -267,15 +267,20 @@
   }
 
   .first-foot-col {
-    max-width: 160px;
+    max-width: 170px;
+
+    h5 {
+      font-size: 18px;
+    }
   }
 
   .second-foot-col {
-    max-width: 160px;
-    margin-right: 4vw;
+    max-width: 170px;
+    margin-right: -20px !important;
 
     h5 {
       margin-bottom: 29px;
+      font-size: 18px;
     }
   }
 
@@ -283,4 +288,6 @@
     margin-left: 4vw;
     font-size: 24px;
   }
+
+
 }
