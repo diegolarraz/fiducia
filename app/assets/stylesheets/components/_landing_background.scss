@@ -146,7 +146,7 @@
   margin-bottom: 130px;
 }
 
-.coming_soon {
+.coming-soon {
   margin-left: 18vw;
   text-decoration: none;
   color: #6B717E;
@@ -168,4 +168,104 @@
   margin-bottom: 20px;
 }
 
+@media only screen and (max-width: 576px) {
 
+  .frase-pegadiza {
+    margin-left: 0;
+  }
+
+  .landing-square {
+    display: none;
+  }
+
+  .join-cards {
+    display: block;
+  }
+
+  .join-card {
+    width: 100%;
+  }
+
+  .landingline {
+    display: none;
+  }
+
+  #top-join-card {
+    margin-bottom: 36px;
+  }
+
+  .white-logo-foot {
+    margin-right: 12px;
+    margin-left: 3vw !important;
+  }
+
+  .descripcion-landing {
+    display: none;
+  }
+
+  .frase-pegadiza {
+    // display: none;
+  }
+
+  .topsec {
+    display: block;
+  }
+
+  .regando-pic {
+    position: absolute;
+    left: auto;
+    top: 2px;
+    right: 0%;
+    bottom: auto;
+    overflow: hidden;
+    width: 100vw;
+    max-width: none;
+  }
+
+  .top-text {
+    margin-top: 360px;
+    text-align: center;
+    width: 100%;
+  }
+
+  .searches {
+    margin-left: 20vw;
+    border-radius: 20px;
+    margin-bottom: 16px;
+    border: 1px solid #6B717E;
+    max-width: 400px;
+    width: 300px;
+  }
+
+  .or {
+    margin-left: 45vw;
+    margin-bottom: 20px;
+  }
+
+  .coming-soon {
+    margin-left: 27vw;
+  }
+
+  .cont1 {
+    margin-top: 112px;
+    text-align: center;
+  }
+
+  #dispon {
+    margin-left: 3vw;
+    font-size: 24px;
+  }
+
+  .first-foot-col {
+    max-width: 160px;
+  }
+
+  .second-foot-col {
+    max-width: 160px;
+    margin-right: 4vw;
+
+    h5 {
+      margin-bottom: 29px;
+    }
+  }
+}

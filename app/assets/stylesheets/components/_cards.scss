@@ -101,3 +101,26 @@
   margin-bottom: 20px;
   padding: 16px;
 }
+
+@media only screen and (max-width: 576px) {
+  .card {
+    max-width: 300px;
+    min-width: 300px;
+    margin-left: 7vw;
+  }
+
+  .card-img-top {
+    height: 300px;
+    width: 100%;
+    object-fit: cover;
+
+  }
+
+  .card img {
+    border-top-left-radius: 8px;
+    border-top-right-radius: 8px;
+    max-height: 230px;
+    min-height: 230px;
+  }
+
+}
