@@ -170,6 +170,12 @@
 
 @media only screen and (max-width: 576px) {
 
+  .top-box {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
   .frase-pegadiza {
     margin-left: 0;
   }
@@ -204,7 +210,9 @@
   }
 
   .frase-pegadiza {
-    // display: none;
+    padding: 0px;
+    margin-left: 2vw;
+    margin-right: 2vw;
   }
 
   .topsec {
@@ -229,21 +237,23 @@
   }
 
   .searches {
-    margin-left: 20vw;
+    margin-left: 0;
     border-radius: 20px;
     margin-bottom: 16px;
     border: 1px solid #6B717E;
     max-width: 400px;
     width: 300px;
+    margin-right: 0;
   }
 
   .or {
-    margin-left: 45vw;
-    margin-bottom: 20px;
+    margin-left: 0;
+    margin-bottom: 24px;
   }
 
   .coming-soon {
-    margin-left: 27vw;
+    margin-left: 0;
+    margin-left: 0;
   }
 
   .cont1 {
@@ -267,5 +277,10 @@
     h5 {
       margin-bottom: 29px;
     }
+  }
+
+  #unete {
+    margin-left: 4vw;
+    font-size: 24px;
   }
 }
