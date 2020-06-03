@@ -9,4 +9,10 @@ class Job < ApplicationRecord
   def display_time
     time.to_time.strftime("%H:%M")
   end
+
+  def mark_as_complete
+    self.completed = true
+    save
+    # raise
+  end
 end

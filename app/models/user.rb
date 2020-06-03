@@ -45,12 +45,15 @@ class User < ApplicationRecord
 
   def pending_enquiries
     enquiries = self.contractor ? self.contractor_enquiries.where(confirmed: [nil, false]) : self.enquiries.where(confirmed: [nil, false])
-    enquiries.sort_by { |enquiry| enquiry.date}
+    enquiries.where('date >= ?', Date.today).order(:date)
+
   end
 
   def pending_jobs
-    jobs = self.contractor ? self.contractor_jobs.where(completed: [nil, false]) : self.jobs.where(completed: [nil, false])
+    # jobs = self.contractor ? self.contractor_jobs.where(completed: [nil, false]) : self.jobs.where(completed: [nil, false])
+    jobs = self.contractor ? self.contractor_jobs : self.jobs
     jobs.sort_by { |job| job.time}
+    jobs.where('time >= ?', Time.now).order(:time)
   end
 
 end
