@@ -11,9 +11,7 @@ if (hoverable1) {
       hoverable1.children[2].style.display = "none"
       hidden1.style.display = "block";
     });
-};
 
-if (hoverable1) {
     hidden1.addEventListener('mouseout', (event) => {
       hoverable1.style.flex = 3;
       hoverable1.children[0].style.display = "block"
@@ -31,9 +29,7 @@ if (hoverable2) {
       hoverable2.children[2].style.display = "none"
       hidden2.style.display = "block";
     });
-};
 
-if (hoverable2) {
     hidden2.addEventListener('mouseout', (event) => {
       hoverable2.style.flex = 3;
       hoverable2.children[0].style.display = "block"
@@ -42,3 +38,5 @@ if (hoverable2) {
       hidden2.style.display = "none";
     });
 };
+
+
