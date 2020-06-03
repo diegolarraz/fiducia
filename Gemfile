@@ -9,7 +9,6 @@ gem 'puma'
 gem 'rails', '6.0.2.1'
 gem 'redis'
 #cloudinary
-gem 'dotenv-rails', groups: [:development, :test]
 gem 'cloudinary', '~> 1.12.0'
 #datepicker for simple forms
 gem 'datetime_picker_input'
