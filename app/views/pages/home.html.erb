@@ -19,15 +19,15 @@
       %>
   <% end %>
   <h6 class="or">- o -</h6>
-  <%= link_to "¡Empieza tu renovacion!", coming_soon_path, class: "coming_soon" %>
+  <%= link_to "¡Empieza tu renovacion!", coming_soon_path, class: "coming-soon" %>
 </div>
 
 <div class="cont1">
-  <h2 class= "frase-pegadiza">Disponibilidad a tu alrededor</h2>
+  <h2 class= "frase-pegadiza" id="dispon">Reparaciones disponibles a tu alrededor</h2>
   <div class="cont">
     <div class="row">
       <% @professions.each do |profession| %>
-        <div class="col-3 mb-4">
+        <div class="col-lg-3 col-md-4 col-sm-6 col-xs-12 mb-4">
           <div class="card">
             <% if profession.name == "Albañilería" %>
               <%= image_tag "Albanileria.jpg", alt: "alttext" %>
@@ -48,7 +48,7 @@
 <div class="join-us-box">
   <h2 class="frase-pegadiza">¡Únete a Fixenova!</h2>
   <div class="join-cards">
-    <div class="join-card">
+    <div class="join-card" id="top-join-card">
       <div class="top-part-join-card">
         <%= image_tag "empieza.png", alt: "empieza", class: "join-card-image" %>
       </div>
