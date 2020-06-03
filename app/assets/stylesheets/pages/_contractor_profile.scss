@@ -9,6 +9,8 @@
   border: 1px solid rgba(30, 30, 30, 0.3);
   border-radius: 10px;
   margin-top: 24px;
+  background: #FFFFFF;
+
 
 
   h3 {
@@ -99,7 +101,9 @@
 .nav-label-custom {
   margin-right: 0;
 }
-
+.nav-link {
+  padding: 8px;
+}
 .btn-cancel-job {
   border: 1px solid #BE5775;
   border-radius: 10px;

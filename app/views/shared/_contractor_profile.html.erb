@@ -9,10 +9,10 @@
     <div class="container-profile">
         <ul class="nav nav-tabs" id="myTab" role="tablist">
           <li class="nav-item nav-label-custom">
-            <a class="nav-link active" id="home-tab" data-toggle="tab" href="#enquiries" role="tab" aria-controls="home" aria-selected="true">Enquiries</a>
+            <a class="nav-link active" id="home-tab" data-toggle="tab" href="#enquiries" role="tab" aria-controls="home" aria-selected="true">Encuestas Pendientes</a>
           </li>
-          <li class="nav-item">
-            <a class="nav-link" id="profile-tab" data-toggle="tab" href="#jobs" role="tab" aria-controls="profile" aria-selected="false">Jobs</a>
+          <li class="nav-item nav-label-custom">
+            <a class="nav-link" id="profile-tab" data-toggle="tab" href="#jobs" role="tab" aria-controls="profile" aria-selected="false">Encuestas Confirmadas</a>
           </li>
         </ul>
 
@@ -72,15 +72,19 @@
                   <%= job.enquiry.information %>
                 </div>
                 <div class="contractor-enquiry-card-cancel">
-                  <%= link_to "Cancel Job",
-                              job_path(job),
-                              method: :delete,
-                              data: { confirm: "¿Estás seguro?" },
-                              class: 'btn-cancel-job' %>
-                  <%= link_to "Mark as complete",
-                              job_path(job, completed: true),
-                              method: :patch,
-                              class: 'btn-book-job' %>
+                  <% if !job.completed %>
+                    <%= link_to "Cancel Job",
+                                job_path(job),
+                                method: :delete,
+                                data: { confirm: "¿Estás seguro?" },
+                                class: 'btn-cancel-job' %>
+                    <%= link_to "Mark as complete",
+                                job_path(job, completed: true),
+                                method: :patch,
+                                class: 'btn-book-job' %>
+                  <% else %>
+                    <p>Completado</p>
+                  <% end %>
                 </div>
             <% end %>
               </div>
