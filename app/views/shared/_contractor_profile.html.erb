@@ -1,10 +1,10 @@
 <div class="true-cont-all">
 
-  <div class="container">
 
-    <div class="greeting">
-      <h1>Hi <%= @user.first_name.capitalize %>!</h1>
-    </div>
+  <div class="container">
+  <div class="greeting">
+    <h1>Hola <%= @user.first_name.capitalize %>!</h1>
+  </div>
 
     <div class="container-profile">
         <ul class="nav nav-tabs" id="myTab" role="tablist">
@@ -48,6 +48,7 @@
                   <% end %>
                 </div>
               </div>
+
             <% end %>
           </div>
           <div id="jobs" class="tab-pane fade in active">
@@ -74,7 +75,7 @@
                   <%= link_to "Cancel Job",
                               job_path(job),
                               method: :delete,
-                              data: { confirm: "Are you sure?" },
+                              data: { confirm: "¿Estás seguro?" },
                               class: 'btn-cancel-job' %>
                   <%= link_to "Mark as complete",
                               job_path(job, completed: true),

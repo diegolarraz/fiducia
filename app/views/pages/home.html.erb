@@ -18,6 +18,8 @@
         placeholder: "Busca tu reparación"
       %>
   <% end %>
+  <h6 class="or">- o -</h6>
+  <%= link_to "¡Empieza tu renovacion!", coming_soon_path, class: "coming_soon" %>
 </div>
 
 <div class="cont1">
@@ -34,7 +36,7 @@
             <% end %>
             <div class="card-body">
               <h5 class="card-title"><%= profession.name %></h5>
-              <%= link_to "Precio desde #{profession.cost} €", users_path(profession: profession), class: "btn" %>
+              <%= link_to "Precio desde #{profession.cost.to_i} €", users_path(profession: profession), class: "btn" %>
             </div>
           </div>
         </div>
@@ -44,7 +46,7 @@
 </div>
 
 <div class="join-us-box">
-  <h2 class="frase-pegadiza">¡Únete a Fiducia!</h2>
+  <h2 class="frase-pegadiza">¡Únete a Fixenova!</h2>
   <div class="join-cards">
     <div class="join-card">
       <div class="top-part-join-card">
@@ -81,7 +83,7 @@
     <%= link_to "Empleo", "#", class: "foot-link"  %> <br>
     <%= link_to "Establecimientos asociados", "#", class: "foot-link"  %> <br>
     <%= link_to "Repartidores", "#", class: "foot-link"  %> <br>
-    <%= link_to "Fiducia Business", "new_user_session_path", class: "foot-link"  %> <br>
+    <%= link_to "Fixenova Business", new_user_registration_path, class: "foot-link"  %> <br>
   </div>
   <div class="second-foot-col foot-col">
     <h5>AYUDA</h5>

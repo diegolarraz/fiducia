@@ -1,27 +1,75 @@
 <div class="container">
-  <div class="container-enquiries">
-    <h1>Hi <%= @user.first_name.capitalize %>!</h1>
-    <% if @user.pending_enquiries.empty? %>
-      <h3>No Open Enquiries</h3>
-    <% else %>
-      <h3>Open Enquiries</h3>
-      <% @user.pending_enquiries.each do |enquiry| %>
-        <ul>
-          <li>
-            <div class="enquiry-card">
-            </div>
-          </li>
-        </ul>
-      <% end %>
-    <% end %>
-  </div>
-  <div class="container-jobs">
 
+  <div class="greeting">
+    <h1>Hola <%= @user.first_name.capitalize %>!</h1>
+
+  </div>
+
+  <div class="container-profile">
+      <ul class="nav nav-tabs" id="myTab" role="tablist">
+        <li class="nav-item nav-label-custom">
+          <a class="nav-link active" id="home-tab" data-toggle="tab" href="#enquiries" role="tab" aria-controls="home" aria-selected="true">Encuestas Pendientes</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" id="profile-tab" data-toggle="tab" href="#jobs" role="tab" aria-controls="profile" aria-selected="false">Encuestas Confirmadas</a>
+        </li>
+      </ul>
+
+      <div class="tab-content" id="myTabContent">
+        <div id="enquiries" class="tab-pane fade show active">
+          <% @user.pending_enquiries.each do |enquiry| %>
+            <div class="contractor-profile-card">
+              <div class="contractor-card-date">
+                <h5><%= enquiry.convert_date %></h5>
+                <p><%= enquiry.timeslot %></p>
+              </div>
+              <div class="contractor-card-job-info">
+                <h6><%= enquiry.title %></h6>
+                <p><%= enquiry.property_address %></p>
+              </div>
+              <div class="contractor-card-user-info">
+                <h6>Para</h6>
+                <p><%= enquiry.user.first_name.capitalize %> <%= enquiry.user.last_name.capitalize %></p>
+              </div>
+              <div class="contractor-enquiry-card-form">
+                <p>Esperando respuesta</p>
+              </div>
+            </div>
+          <% end %>
+        </div>
+
+        <div id="jobs" class="tab-pane fade in active">
+          <% @user.pending_jobs.each do |job| %>
+            <div class="contractor-profile-card">
+              <div class="contractor-card-date">
+                <h5><%= job.display_date %></h5>
+                <p><%= job.display_time %></p>
+              </div>
+              <div class="contractor-card-job-info">
+                <h6><%= job.enquiry.title %></h6>
+                <p><%= job.enquiry.property_address %></p>
+              </div>
+              <div class="contractor-card-user-info">
+                <h6>Con</h6>
+                <p><%= job.enquiry.contractor.contractor_name %></p>
+              </div>
+              <div class="contractor-enquiry-card-cancel">
+                <% if job.completed %>
+                  <p>Completado</p>
+                <% else %>
+                  <p>Por completar</p>
+                <% end %>
+              </div>
+            </div>
+          <% end %>
+        </div>
+    </div>
   </div>
 </div>
 
 
-<div class="greeting">
+
+<!-- <div class="greeting">
     <h1>Hi <%= @user.first_name.capitalize %>!</h1>
   </div>
 
@@ -105,4 +153,5 @@
         </div>
     </div>
   </div>
-</div>
+</div> -->
+
