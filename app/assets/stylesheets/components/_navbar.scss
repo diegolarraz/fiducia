@@ -28,10 +28,36 @@
   }
 }
 
+#incio-mobil {
+  display: none;
+  color: #9AA6A4;
+
+}
+
 @media only screen and (max-width: 576px) {
   .navbar-lewagon .navbar-brand img {
     width: 50px;
     margin-left: 3vw;
+  }
+
+  #incio-mobil {
+    display: block;
+    list-style: none;
+    border: 2px solid #9AA6A4;
+    border-radius: 15px;
+    padding-left: 6px;
+    padding-right: 6px;
+    color: #9AA6A4 !important;
+    text-decoration: none;
+
+    a {
+      color: #4B525E !important;
+    }
+
+    &:hover {
+      border: 2px solid rgba(0,0,0,0.6);
+
+    }
   }
 
 }
