@@ -92,6 +92,9 @@
   background-position: left bottom;
   background-size: 40vw 95vh;
   background-attachment: fixed;
+  padding-bottom: 130px;
+  display: flex;
+  justify-content: space-between;
 }
 
 .headers-contractor {
@@ -108,9 +111,6 @@
   }
 }
 
-.true-cont-all {
-  padding-bottom: 130px;
-}
 
 .contractor-right-price-confirm {
   position: absolute;
@@ -128,4 +128,46 @@
 
 .escoge-fecha {
   margin-left: 3px;
+}
+
+@media only screen and (max-width: 576px) {
+
+  .true-cont-all {
+    background: url(shapes.png);
+    background-repeat: no-repeat;
+    background-position: left bottom;
+    background-size: 60vw 70vh;
+    background-attachment: fixed;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100vw !important;
+  }
+
+  .headers-contractor {
+    width: 90vw;
+    text-align: center;
+    margin-left: 0;
+  }
+
+  .contractor-card {
+    margin-right: 0 !important;
+    width: 90vw;
+    margin-left: 0;
+  }
+
+  .contractor-right-price-confirm {
+    position: absolute;
+    left: 75vw;
+    text-align: right;
+  }
+
+  .confirm-prof-btn {
+    font-size: 12px;
+  }
+
+  .contractor-card-left {
+    max-width: 77px;
+    max-height: 195px;
+  }
 }
