@@ -5,3 +5,4 @@ require("custom/cardInfoDisplay")
 
 import "bootstrap";
 import { loginProfesional } from "../components/login_profesional"
+import { dropdown } from "../components/dropdown"
