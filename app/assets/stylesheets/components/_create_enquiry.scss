@@ -36,5 +36,19 @@
 }
 
 .contractor-pop-name {
-  margin-left: 1vw;
+  margin-left: 0vw;
+}
+
+@media only screen and (max-width: 576px) {
+
+  .pop-up-content {
+  width: 90vw;
+  height: 80vh;
+  background-color: white;
+  border-radius: 4px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
 }
