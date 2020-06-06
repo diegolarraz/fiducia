@@ -28,6 +28,10 @@
   }
 }
 
+#avatar-mobil {
+  display: none;
+}
+
 #incio-mobil {
   display: none;
   color: #9AA6A4;
@@ -58,6 +62,14 @@
       border: 2px solid rgba(0,0,0,0.6);
 
     }
+  }
+
+  #avatar-mobil {
+    display: block;
+  }
+
+  .nav-item {
+    list-style: none;
   }
 
 }
