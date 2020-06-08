@@ -3,6 +3,9 @@
     <%= image_tag "logo.png" %>
     <% end %>
   <% if user_signed_in? == false %>
+    <li class="nav-item" id="urgente">
+      <%= link_to "Reparación Urgente", users_path(profession: 3), class: "nav-link" %>
+    </li>
     <li class="nav-item" id="incio-mobil">
       <%= link_to "Iniciar sesión", new_user_session_path, class: "nav-link" %>
     </li>

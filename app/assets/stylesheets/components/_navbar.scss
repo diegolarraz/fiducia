@@ -45,6 +45,7 @@
   }
 
   #incio-mobil {
+    margin-right: 5px;
     display: block;
     list-style: none;
     border: 2px solid #9AA6A4;
@@ -56,6 +57,7 @@
 
     a {
       color: #4B525E !important;
+      font-size: 12px;
     }
 
     &:hover {
@@ -70,6 +72,15 @@
 
   .nav-item {
     list-style: none;
+  }
+
+  #urgente {
+    font-size: 12px;
+    margin-left: 70px;
+
+    a {
+      color: #4B525E !important;
+    }
   }
 
 }
