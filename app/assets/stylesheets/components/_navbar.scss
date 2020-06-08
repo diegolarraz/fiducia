@@ -46,6 +46,7 @@
   .navbar-lewagon .navbar-brand img {
     width: 50px;
     margin-left: 3vw;
+    margin-right: 0px;
   }
 
   #incio-mobil {
@@ -86,6 +87,11 @@
 
     a {
       color: #4B525E !important;
+      border: 2px solid #9AA6A4;
+      text-decoration: none;
+      padding-left: 6px;
+      padding-right: 6px;
+      border-radius: 15px;
     }
   }
 
